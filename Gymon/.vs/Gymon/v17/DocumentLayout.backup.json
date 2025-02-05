@@ -1,0 +1,242 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\bexti\\source\\repos\\Gymon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0C274F-EB08-4B76-A2AD-180145A86D30}|Gymon.MVC\\Gymon.MVC.csproj|c:\\users\\bexti\\source\\repos\\gymon\\gymon.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0C274F-EB08-4B76-A2AD-180145A86D30}|Gymon.MVC\\Gymon.MVC.csproj|solutionrelative:gymon.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0C274F-EB08-4B76-A2AD-180145A86D30}|Gymon.MVC\\Gymon.MVC.csproj|c:\\users\\bexti\\source\\repos\\gymon\\gymon.mvc\\views\\home\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F0C274F-EB08-4B76-A2AD-180145A86D30}|Gymon.MVC\\Gymon.MVC.csproj|solutionrelative:gymon.mvc\\views\\home\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0C274F-EB08-4B76-A2AD-180145A86D30}|Gymon.MVC\\Gymon.MVC.csproj|c:\\users\\bexti\\source\\repos\\gymon\\gymon.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0C274F-EB08-4B76-A2AD-180145A86D30}|Gymon.MVC\\Gymon.MVC.csproj|solutionrelative:gymon.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0C274F-EB08-4B76-A2AD-180145A86D30}|Gymon.MVC\\Gymon.MVC.csproj|c:\\users\\bexti\\source\\repos\\gymon\\gymon.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0C274F-EB08-4B76-A2AD-180145A86D30}|Gymon.MVC\\Gymon.MVC.csproj|solutionrelative:gymon.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{486851E2-3AF9-43E6-A2DB-097BFCD61709}|Gymon.Core\\Gymon.Core.csproj|c:\\users\\bexti\\source\\repos\\gymon\\gymon.core\\enums\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{486851E2-3AF9-43E6-A2DB-097BFCD61709}|Gymon.Core\\Gymon.Core.csproj|solutionrelative:gymon.core\\enums\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523D9F66-0E50-4E64-830F-06B47672C441}|Gymon.BL\\Gymon.BL.csproj|c:\\users\\bexti\\source\\repos\\gymon\\gymon.bl\\services\\imlements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{523D9F66-0E50-4E64-830F-06B47672C441}|Gymon.BL\\Gymon.BL.csproj|solutionrelative:gymon.bl\\services\\imlements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{523D9F66-0E50-4E64-830F-06B47672C441}|Gymon.BL\\Gymon.BL.csproj|c:\\users\\bexti\\source\\repos\\gymon\\gymon.bl\\services\\interfaces\\iauthtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{523D9F66-0E50-4E64-830F-06B47672C441}|Gymon.BL\\Gymon.BL.csproj|solutionrelative:gymon.bl\\services\\interfaces\\iauthtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F76164A-A254-4392-B11F-2E379B4773E1}|Gymon.DAL\\Gymon.DAL.csproj|c:\\users\\bexti\\source\\repos\\gymon\\gymon.dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F76164A-A254-4392-B11F-2E379B4773E1}|Gymon.DAL\\Gymon.DAL.csproj|solutionrelative:gymon.dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{486851E2-3AF9-43E6-A2DB-097BFCD61709}|Gymon.Core\\Gymon.Core.csproj|c:\\users\\bexti\\source\\repos\\gymon\\gymon.core\\repostitories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{486851E2-3AF9-43E6-A2DB-097BFCD61709}|Gymon.Core\\Gymon.Core.csproj|solutionrelative:gymon.core\\repostitories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0C274F-EB08-4B76-A2AD-180145A86D30}|Gymon.MVC\\Gymon.MVC.csproj|c:\\users\\bexti\\source\\repos\\gymon\\gymon.mvc\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0C274F-EB08-4B76-A2AD-180145A86D30}|Gymon.MVC\\Gymon.MVC.csproj|solutionrelative:gymon.mvc\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F76164A-A254-4392-B11F-2E379B4773E1}|Gymon.DAL\\Gymon.DAL.csproj|c:\\users\\bexti\\source\\repos\\gymon\\gymon.dal\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F76164A-A254-4392-B11F-2E379B4773E1}|Gymon.DAL\\Gymon.DAL.csproj|solutionrelative:gymon.dal\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0C274F-EB08-4B76-A2AD-180145A86D30}|Gymon.MVC\\Gymon.MVC.csproj|c:\\users\\bexti\\source\\repos\\gymon\\gymon.mvc\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F0C274F-EB08-4B76-A2AD-180145A86D30}|Gymon.MVC\\Gymon.MVC.csproj|solutionrelative:gymon.mvc\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F76164A-A254-4392-B11F-2E379B4773E1}|Gymon.DAL\\Gymon.DAL.csproj|c:\\users\\bexti\\source\\repos\\gymon\\gymon.dal\\gymon.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3F76164A-A254-4392-B11F-2E379B4773E1}|Gymon.DAL\\Gymon.DAL.csproj|solutionrelative:gymon.dal\\gymon.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 334,
+          "SelectedChildIndex": 13,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Views\\Home\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "Gymon.MVC\\Views\\Home\\AccessDenied.cshtml",
+              "ToolTip": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Views\\Home\\AccessDenied.cshtml",
+              "RelativeToolTip": "Gymon.MVC\\Views\\Home\\AccessDenied.cshtml",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAiwAsBAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-05T16:49:58.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Gymon.MVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Gymon.MVC\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwB0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T16:13:35.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Roles.cs",
+              "DocumentMoniker": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.Core\\Enums\\Roles.cs",
+              "RelativeDocumentMoniker": "Gymon.Core\\Enums\\Roles.cs",
+              "ToolTip": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.Core\\Enums\\Roles.cs",
+              "RelativeToolTip": "Gymon.Core\\Enums\\Roles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T15:48:18.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Program.cs",
+              "RelativeDocumentMoniker": "Gymon.MVC\\Program.cs",
+              "ToolTip": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Program.cs",
+              "RelativeToolTip": "Gymon.MVC\\Program.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAiwEsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T15:13:31.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Gymon.MVC\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Gymon.MVC\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T14:52:44.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "Gymon.MVC\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "Gymon.MVC\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-05T14:44:09.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.Core\\Repostitories\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Gymon.Core\\Repostitories\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.Core\\Repostitories\\IGenericRepository.cs",
+              "RelativeToolTip": "Gymon.Core\\Repostitories\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T14:23:38.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IAuthtService.cs",
+              "DocumentMoniker": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.BL\\Services\\Interfaces\\IAuthtService.cs",
+              "RelativeDocumentMoniker": "Gymon.BL\\Services\\Interfaces\\IAuthtService.cs",
+              "ToolTip": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.BL\\Services\\Interfaces\\IAuthtService.cs",
+              "RelativeToolTip": "Gymon.BL\\Services\\Interfaces\\IAuthtService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwA8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T14:25:31.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.DAL\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Gymon.DAL\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.DAL\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Gymon.DAL\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T14:23:30.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.DAL\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Gymon.DAL\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.DAL\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "Gymon.DAL\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAA4wEkAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T14:23:24.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Gymon.DAL.csproj",
+              "DocumentMoniker": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.DAL\\Gymon.DAL.csproj",
+              "RelativeDocumentMoniker": "Gymon.DAL\\Gymon.DAL.csproj",
+              "ToolTip": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.DAL\\Gymon.DAL.csproj",
+              "RelativeToolTip": "Gymon.DAL\\Gymon.DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-05T14:23:19.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Gymon.MVC\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Gymon.MVC\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAWwEAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T14:10:02.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.BL\\Services\\Imlements\\AuthService.cs",
+              "RelativeDocumentMoniker": "Gymon.BL\\Services\\Imlements\\AuthService.cs",
+              "ToolTip": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.BL\\Services\\Imlements\\AuthService.cs",
+              "RelativeToolTip": "Gymon.BL\\Services\\Imlements\\AuthService.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAiwEEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T14:08:19.349Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

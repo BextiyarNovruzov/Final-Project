@@ -1,0 +1,54 @@
+﻿@using Gymon.BL.ViewModels.AuthVMs
+@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Login Register Start -->
+<section class="gap login-register">
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="height: 100vh;">
+            <div class="col-lg-6">
+                <div class="box login text-center">
+                    <h3>LogIn Your Account</h3>
+                    <form method="post">
+                        <label asp-for="UserNameOrEmail"></label>
+                        <input asp-for="UserNameOrEmail" placeholder="UserName or Email address" class="form-control mb-3">
+                        <span class="text-danger" asp-validation-for="UserNameOrEmail"></span>
+
+                        <label asp-for="UserNameOrEmail"></label>
+                        <input asp-for="Password" type="password"  placeholder="Password">
+                        <span class ="text-danger" asp-validation-for="Password"></span>
+
+                        <div class="remember d-flex justify-content-between align-items-center mb-3">
+                            <div class="first">
+                                <label asp-for="RememberMe"></label>
+                                <input asp-for="RememberMe" type="checkbox"  id="checkbox">
+                                <span  asp-validation-for="RememberMe"></span>
+                                
+                                
+                            </div>
+                            <div class="second">
+                                <a href="javascript:void(0)">Forget a Password?</a>
+                            </div>
+                        </div>
+                       
+                        <button asp-action="Login" asp-controller="Account" type="submit" class="theme-btn">Login</button>
+                        <hr>
+                        <div class="text-center">
+                            <a asp-action="Register" asp-controller="Account" class="small">Create an Account!</a>
+                        </div>
+                        
+
+
+                    </form>
+                    <div class="text-danger" asp-validation-summary="ModelOnly">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Login Register End -->

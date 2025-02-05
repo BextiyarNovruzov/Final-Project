@@ -1,0 +1,58 @@
+﻿@using Gymon.BL.ViewModels.AuthVMs
+@model RegisterVM
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Login Register Start -->
+<section class="gap login-register">
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="height: 100vh;">
+            <div class="col-lg-6">
+                <div class="box login text-center">
+                    <h4>Create Your Account</h4>
+                    <form method="post">
+
+                        <input asp-for="ComplateName" class="form-control form-control-user" type="text" placeholder="Full Name">
+                        <span class="text-danger" asp-validation-for="ComplateName"></span>
+                        <label asp-for="ComplateName"></label>
+
+
+                        <input asp-for="Username" class="form-control form-control-user" type="text"  placeholder="User Name">
+                        <span class="text-danger" asp-validation-for="Username"></span>
+                        <label asp-for="Username"></label>
+
+
+
+                        <input asp-for="Email" class="form-control form-control-user" type="email"   placeholder="Email address">
+                        <span class="text-danger" asp-validation-for="Email"></span>
+                        <label asp-for="Email"></label>
+
+                        <input asp-for="Password" class="form-control form-control-user" type="password"   placeholder="Password">
+                        <span class="text-danger" asp-validation-for="Password"></span>
+                        <label asp-for="Password"></label>
+
+                        <input asp-for="RePassword" class="form-control form-control-user" type="password" placeholder="Repassword">
+                        <label asp-for="RePassword"></label>
+                        <span class="text-danger" asp-validation-for="RePassword"></span>
+
+                       
+
+                        <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.</p>
+                        <button asp-action="Register" asp-controller="Account" type="submit" class="theme-btn">Register</button>
+                        <hr>
+                        <div class="text-center">
+                            <a asp-action="Login" asp-controller="Account" class="small">
+                                If you already an account, LogIn !
+                            </a>
+                        </div>
+                    </form>
+                    <div class="text-danger" asp-validation-summary="ModelOnly">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Login Register End -->

@@ -1,0 +1,17 @@
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\bin\Debug\net8.0\Gymon.BL.deps.json
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\bin\Debug\net8.0\Gymon.BL.dll
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\bin\Debug\net8.0\Gymon.BL.pdb
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\bin\Debug\net8.0\Gymon.Core.dll
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\bin\Debug\net8.0\Gymon.DAL.dll
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\bin\Debug\net8.0\Gymon.DAL.pdb
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\bin\Debug\net8.0\Gymon.Core.pdb
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\obj\Debug\net8.0\Gymon.BL.csproj.AssemblyReference.cache
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\obj\Debug\net8.0\Gymon.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\obj\Debug\net8.0\Gymon.BL.AssemblyInfoInputs.cache
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\obj\Debug\net8.0\Gymon.BL.AssemblyInfo.cs
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\obj\Debug\net8.0\Gymon.BL.csproj.CoreCompileInputs.cache
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\obj\Debug\net8.0\Gymon.BL.csproj.Up2Date
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\obj\Debug\net8.0\Gymon.BL.dll
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\obj\Debug\net8.0\refint\Gymon.BL.dll
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\obj\Debug\net8.0\Gymon.BL.pdb
+C:\Users\bexti\source\repos\Gymon\Gymon.BL\obj\Debug\net8.0\ref\Gymon.BL.dll
