@@ -1,0 +1,42 @@
+﻿@using Newtonsoft.Json
+@using Gymon.Core.Entities
+
+@{
+    var sportTypesJson = Context.Session.GetString("SportTypes");
+    var sportTypes = string.IsNullOrEmpty(sportTypesJson)
+        ? new List<SportType>()
+        : JsonConvert.DeserializeObject<List<SportType>>(sportTypesJson);
+}
+
+<div class="form-group">
+    <label for="sportType">Select Sport Type</label>
+    <select id="sportType" name="sportType" class="form-control">
+        <option value="">-- Select Sport Type --</option>
+        @foreach (var sportType in sportTypes)
+        {
+            <option value="@sportType.Id">@sportType.Name</option>
+        }
+    </select>
+</div>
+
+<button id="nextButton" class="btn btn-primary mt-3" disabled>Next</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#sportType").change(function () {
+            var selectedSportType = $(this).val();
+            if (selectedSportType) {
+                $("#nextButton").prop("disabled", false);
+            } else {
+                $("#nextButton").prop("disabled", true);
+            }
+        });
+
+        $("#nextButton").click(function () {
+            var selectedSportType = $("#sportType").val();
+            sessionStorage.setItem("selectedSportType", selectedSportType);
+            window.location.href = "/Appointment/SelectTrainer";
+        });
+    });
+</script>

@@ -1,10 +1,8 @@
 ﻿using Gymon.BL;
-using Gymon.Core.Enums;
 using Gymon.DAL.Context;
 using Gymon.MVC.Extentions;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
 
 namespace Gymon.MVC
 {
@@ -17,88 +15,94 @@ namespace Gymon.MVC
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            //Add DBcontext
+            // Add DBcontext
             builder.Services.AddDbContext<GymonDbContext>(opt =>
             {
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("MsSql"));
             });
 
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // Session süresi
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+
+
+            // Add AutoMapper and Custom Services
             builder.Services.AddAutoMapper();
-            builder.Services.AddServicees();
+            builder.Services.AddServices();   // Bu servislerin sıralaması genellikle önemli değil
             builder.Services.AddRepositories();
 
-
-
-
+            // Authentication ve Authorization'ı önce ekle
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-     .AddCookie(options =>
-     {
-         options.LoginPath = "/Account/Login";
-         options.LogoutPath = "/Account/Logout";
-         options.AccessDeniedPath = "/Home/AccessDenied";
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/Account/Login";
+                    options.LogoutPath = "/Account/Logout";
+                    options.AccessDeniedPath = "/Home/AccessDenied";
 
-         options.Events.OnRedirectToLogin = context =>
-         {
-             // Giriş yapmamış kullanıcı için yönlendirme
-             if (!context.HttpContext.User.Identity.IsAuthenticated)
-             {
-                 context.Response.Redirect("/Account/Login");
-             }
+                    options.Events.OnRedirectToLogin = context =>
+                    {
+                        if (!context.HttpContext.User.Identity.IsAuthenticated)
+                        {
+                            context.Response.Redirect("/Account/Login");
+                        }
 
-             return Task.CompletedTask;
-         };
-     });
-
-
+                        return Task.CompletedTask;
+                    };
+                });
 
             builder.Services.AddAuthorization();
-            var app = builder.Build();
-            //app.UseUserSeed();
 
+            var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+                app.UseHsts();  // Production için HSTS kullanımı
             }
 
+
+            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseUserSeedAsync();
-
-
-
-
             app.UseRouting();
 
-            app.UseAuthentication();  // Authentication
-            app.UseAuthorization();   // Authorization
+            app.UseAuthentication();  // Authentication middleware
+            app.UseAuthorization();   // Authorization middleware
 
+            // Route Configuration
             app.MapControllerRoute(
-           name: "register",
-           pattern: "register",
-           defaults: new { controller = "Account", action = "Register" }
-           );
-            app.MapControllerRoute(
-           name: "logout",
-           pattern: "logout",
-           defaults: new { controller = "Account", action = "Logout" }
-           );
-
-            app.MapControllerRoute(
-            name: "login",
-            pattern: "login",
-            defaults: new { controller = "Account", action = "Login" }
+                name: "register",
+                pattern: "register",
+                defaults: new { controller = "Account", action = "Register" }
             );
+
             app.MapControllerRoute(
-            name: "areas",
-            pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
-          );
+                name: "logout",
+                pattern: "logout",
+                defaults: new { controller = "Account", action = "Logout" }
+            );
+
+            app.MapControllerRoute(
+                name: "login",
+                pattern: "login",
+                defaults: new { controller = "Account", action = "Login" }
+            );
+
+            app.MapControllerRoute(
+                name: "areas",
+                pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
+            );
+
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}"
+            );
 
             app.Run();
         }

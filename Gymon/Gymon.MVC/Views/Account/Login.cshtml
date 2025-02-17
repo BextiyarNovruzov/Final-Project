@@ -25,7 +25,7 @@
                             <div class="first">
                                 <label asp-for="RememberMe"></label>
                                 <input asp-for="RememberMe" type="checkbox"  id="checkbox">
-                                <span  asp-validation-for="RememberMe"></span>
+                                <span class="text-danger" asp-validation-for="RememberMe"></span>
                                 
                                 
                             </div>
@@ -43,6 +43,7 @@
 
 
                     </form>
+                    <hr>
                     <div class="text-danger" asp-validation-summary="ModelOnly">
                     </div>
 

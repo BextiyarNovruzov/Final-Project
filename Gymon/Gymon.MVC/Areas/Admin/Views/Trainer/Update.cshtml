@@ -1,0 +1,55 @@
+﻿@using Gymon.BL.ViewModels.TrainnerVMs
+@model UpdateTrainerVM
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<form asp-action="Update" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="FullName">Full Name</label>
+        <input asp-for="FullName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Phone">Phone</label>
+        <input asp-for="Phone" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="HourlyRate">Hourly Rate</label>
+        <input asp-for="HourlyRate" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Current Image</label><br />
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <img src="@Model.ImageUrl" alt="Trainer Image" width="150" />
+        }
+        else
+        {
+            <p>No image available</p>
+        }
+    </div>
+
+    <div class="form-group">
+        <label>Upload New Image</label>
+        <input type="file" asp-for="Image" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="SportTypes">Sport Types</label>
+        <select multiple="multiple" class="form-control" id="SportTypes" name="TrainerSportTypesId">
+            @foreach (var sportType in Model.SportTypes)
+            {
+                <option value="@sportType.Value">@sportType.Text</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>

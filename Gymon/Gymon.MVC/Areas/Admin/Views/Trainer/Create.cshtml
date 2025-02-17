@@ -1,0 +1,41 @@
+﻿@using Gymon.BL.ViewModels.TrainnerVMs
+@model CreateTrainerVM
+
+@{
+    ViewData["Title"] = "Create Trainer";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h2>Create Trainer</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="FullName">Full Name</label>
+        <input type="text" class="form-control" id="FullName" name="FullName" required />
+    </div>
+    <div class="form-group">
+        <label for="Image">Image</label>
+        <input type="file" class="form-control" id="Image" name="Image" required />
+    </div>
+    <div class="form-group">
+        <label for="HourlyRate">Hourly Rate</label>
+        <input type="number" class="form-control" id="HourlyRate" name="HourlyRate" required />
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" required />
+    </div>
+    <div class="form-group">
+        <label for="Phone">Phone</label>
+        <input type="text" class="form-control" id="Phone" name="Phone" required />
+    </div>
+    <div class="form-group">
+        <label for="SportTypes">Sport Types</label>
+        <select multiple="multiple" class="form-control" id="SportTypes" name="TrainerSportTypesId">
+            @foreach (var sportType in Model.SportTypes)
+            {
+                <option value="@sportType.Value">@sportType.Text</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

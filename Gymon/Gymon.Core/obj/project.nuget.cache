@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E+ZDDbQ99xA=",
+  "dgSpecHash": "MnbkhpbHc0g=",
   "success": true,
-  "projectFilePath": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.Core\\Gymon.Core.csproj",
+  "projectFilePath": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.Core\\Gymon.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bexti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.12\\microsoft.aspnetcore.cryptography.internal.8.0.12.nupkg.sha512",
     "C:\\Users\\bexti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.12\\microsoft.aspnetcore.cryptography.keyderivation.8.0.12.nupkg.sha512",

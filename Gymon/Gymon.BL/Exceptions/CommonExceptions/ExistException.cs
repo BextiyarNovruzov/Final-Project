@@ -11,7 +11,7 @@ namespace Gymon.BL.Exceptions.CommonExceptions
     {
         public int Code => StatusCodes.Status409Conflict;
         public string ErrorMessage { get; }
-        const string _message = " is exist";
+        const string _message = "is exist";
 
         public ExistException() : base(typeof(T).Name + _message)
         {

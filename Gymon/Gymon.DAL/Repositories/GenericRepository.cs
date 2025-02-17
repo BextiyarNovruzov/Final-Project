@@ -15,9 +15,9 @@ namespace Gymon.DAL.Repositories
 {
 
 
-    public class GenericRepository<T>(GymonDbContext context) : IGenericRepository<T> where T : BaseEntity, new()
+    public class GenericRepository<T>(GymonDbContext _context) : IGenericRepository<T> where T : BaseEntity, new()
     {
-        protected DbSet<T> Table => context.Set<T>();
+        protected DbSet<T> Table => _context.Set<T>();
 
         public async Task AddAsync(T entity)
         {
@@ -33,20 +33,23 @@ namespace Gymon.DAL.Repositories
         public async Task<bool> IsExistAsync(int id)
             => await Table.AnyAsync(t => t.Id == id);
 
-        public void DeleteAsync(T entity)
+        public void Delete(T entity)
         {
             Table.Remove(entity);
         }
 
-        public async Task<bool> DeleteAsync(int id)
+        public async Task<bool> DeleteAsync(int? id)
         {
             int result = await Table.Where(T => T.Id == id).ExecuteDeleteAsync();
             return result > 0;
         }
 
         public async Task<int> SaveAsync()
-            => await context.SaveChangesAsync();
-
+            => await _context.SaveChangesAsync();
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
         public async Task UpdateAsync(T entity)
         {
             Table.Update(entity);
@@ -66,12 +69,21 @@ namespace Gymon.DAL.Repositories
 
         public User GetByUsername(string username)
         {
-           return context.Users.SingleOrDefault(x => x.Username == username);
+           return _context.Users.SingleOrDefault(x => x.Username == username);
         }
 
         public async Task<User?> GetUserByUsernameAsync(string username)
         {
-            return await context.Users.FirstOrDefaultAsync(u => u.Username == username);
+            return await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
         }
-    }
+
+        public async Task<List<T>> GetAllAsync()
+        {
+            return await _context.Set<T>().ToListAsync();
+        }
+        public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await Table.Where(predicate).ToListAsync();
+        }
+    }   
 }

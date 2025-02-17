@@ -1,0 +1,72 @@
+﻿<header class="header-style-one">
+    <div class="container">
+        <div class="row">
+            <div class="desktop-nav" id="stickyHeader">
+                <div class="container"> 
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="d-flex-all justify-content-between">
+                                <div class="header-logo">
+                                    <a href="index.html">
+                                        <figure>
+                                            <img src="~/assets/images/logo-2.svg" alt="logoo">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="nav-bar">
+                                    <ul>
+                                        <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                                        <li class="menu-item-has-children">
+                                            <a href="javascript:void(0)">About</a>
+                                            <ul class="sub-menu">
+                                                <li><a asp-action="Index" asp-controller="About">About</a></li>
+                                                <li><a asp-action="SecoundAbout" asp-controller="About">Features & Benefits</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="javascript:void(0)">Shop</a>
+                                            <ul class="sub-menu">
+                                                <li><a asp-action="Product" asp-controller="Shop">Our Products</a></li>
+                                                <li><a asp-action="ProductDetails" asp-controller="Shop">Product Details</a></li>
+                                                <li><a asp-action="Cart" asp-controller="Shop">Shop Cart</a></li>
+                                                <li><a asp-action="CartCheckout" asp-controller="Shop">Cart Checkout</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a asp-action="Index" asp-controller="Contact">Contact</a>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="navbar-nav">
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            <li class="nav-item">
+                                                <form method="post">
+                                                    <button asp-action="Logout" asp-controller="Account" type="submit" class="btn btn-danger">
+                                                        <i class="fas fa-sign-out-alt"></i> Logout
+                                                    </button>
+                                                </form>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li class="nav-item">
+                                                <a asp-action="Login" asp-controller="Account" class="btn btn-primary">
+                                                    <i class="fas fa-sign-in-alt"></i> Login
+                                                </a>
+                                            </li>
+                                        }
+                                    </ul>
+                                    <ul>
+                                        @* Appointment butonu *@
+                                        <a asp-action="BookAppointment" asp-controller="Appointment" class="btn btn-danger"> Appointment</a>
+                                        <ul />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

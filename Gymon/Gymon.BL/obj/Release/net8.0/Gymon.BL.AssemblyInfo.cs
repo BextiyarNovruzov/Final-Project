@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gymon.BL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24277ed98b3fe6d69f7e3f0bb6c917f91c38f015")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gymon.BL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Gymon.BL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

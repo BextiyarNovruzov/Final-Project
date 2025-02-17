@@ -1,5 +1,4 @@
-﻿﻿
-<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -31,38 +30,46 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-action="Index" asp-controller="Dashboard">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Uniqlo admin</div>
+                <div class="sidebar-brand-text mx-3">GymOn Admin <sup>2</sup></div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
 
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" asp-action="Index" asp-controller="Slider">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Slider</span>
+                <a asp-action="Index" asp-controller="Appointment" class="nav-link collapsed">
+                    <span>Appointments</span>
+                </a>
+
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a asp-action="Index" asp-controller="SportType" class="nav-link collapsed">
+                    <span>Sport Types</span>
+                </a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a asp-action="Index" asp-controller="Trainer" class="nav-link collapsed">
+                    <span>Trainers</span>
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" asp-action="Index" asp-controller="Category">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Category</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" asp-action="Index" asp-controller="Product">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Product</span>
-                </a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -88,36 +95,32 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
+
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <!-- Nav Item - Messages -->
+
+
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                     src="~/admin/img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                 aria-labelledby="userDropdown">
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
+
 
                     </ul>
 
                 </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    @RenderBody()
+
+                </div>
+                <!-- /.container-fluid -->
+
             </div>
-            @RenderBody()
+            <!-- End of Main Content -->
+            <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -126,8 +129,10 @@
                 </div>
             </footer>
             <!-- End of Footer -->
+
         </div>
         <!-- End of Content Wrapper -->
+
     </div>
     <!-- End of Page Wrapper -->
     <!-- Scroll to Top Button-->

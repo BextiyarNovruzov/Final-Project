@@ -1,0 +1,21 @@
+﻿@using Gymon.BL.ViewModels.SportTypeVMs
+@model CreateAndUpdateSportTypeVM
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<!-- Brand Buttons -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <a asp-action="Index" asp-controller="SportType" class="m-0 font-weight-bold text-primary">Return List</a>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Name">Sport Type</label>
+                <input asp-for="Name" class="form-control" placeholder="Enter New Sport Type">
+                <span asp-validation-for="Name"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

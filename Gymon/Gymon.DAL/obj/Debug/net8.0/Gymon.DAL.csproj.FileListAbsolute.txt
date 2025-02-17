@@ -15,3 +15,21 @@ C:\Users\bexti\source\repos\Gymon\Gymon.DAL\obj\Debug\net8.0\Gymon.DAL.pdb
 C:\Users\bexti\source\repos\Gymon\Gymon.DAL\obj\Debug\net8.0\ref\Gymon.DAL.dll
 C:\Users\bexti\source\repos\Gymon\Gymon.DAL\bin\Debug\net8.0\Gymon.DAL.runtimeconfig.json
 C:\Users\bexti\source\repos\Gymon\Gymon.DAL\obj\Debug\net8.0\Gymon.DAL.genruntimeconfig.cache
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\bin\Debug\net8.0\Gymon.DAL.deps.json
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\bin\Debug\net8.0\Gymon.DAL.runtimeconfig.json
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\bin\Debug\net8.0\Gymon.DAL.dll
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\bin\Debug\net8.0\Gymon.DAL.pdb
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\bin\Debug\net8.0\Gymon.Core.dll
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\bin\Debug\net8.0\Gymon.Core.pdb
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\obj\Debug\net8.0\Gymon.DAL.csproj.AssemblyReference.cache
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\obj\Debug\net8.0\Gymon.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\obj\Debug\net8.0\Gymon.DAL.AssemblyInfoInputs.cache
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\obj\Debug\net8.0\Gymon.DAL.AssemblyInfo.cs
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\obj\Debug\net8.0\Gymon.DAL.csproj.CoreCompileInputs.cache
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\obj\Debug\net8.0\Gymon.DAL.sourcelink.json
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\obj\Debug\net8.0\Gymon.DAL.csproj.Up2Date
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\obj\Debug\net8.0\Gymon.DAL.dll
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\obj\Debug\net8.0\refint\Gymon.DAL.dll
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\obj\Debug\net8.0\Gymon.DAL.pdb
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\obj\Debug\net8.0\Gymon.DAL.genruntimeconfig.cache
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.DAL\obj\Debug\net8.0\ref\Gymon.DAL.dll

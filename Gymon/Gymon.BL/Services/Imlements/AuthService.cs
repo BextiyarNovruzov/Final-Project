@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Security.Claims;
 
 
@@ -37,6 +38,7 @@ public class AuthService(IUserRepository repo, IMapper mapper,IHttpContextAccess
 
     public async Task<User> LoginAsync(LoginVM vm)
     {
+        
         User? user = null;
         if (vm.UserNameOrEmail.Contains('@'))
         {
@@ -65,7 +67,7 @@ public class AuthService(IUserRepository repo, IMapper mapper,IHttpContextAccess
         var authProperties = new AuthenticationProperties
         {
             IsPersistent = true, // Tarayıcı kapansa bile girişin hatırlanması için
-            ExpiresUtc = DateTime.UtcNow.AddMinutes(1) // 1 saat geçerli olacak
+            ExpiresUtc = DateTime.UtcNow.AddHours(2) // 1 saat geçerli olacak
         };
 
         await httpContextAccessor.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, authProperties);

@@ -28,8 +28,13 @@ namespace Gymon.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterVM vm)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             if (isAuthonticate) return RedirectToAction("Index", "Home");
-            await service.RegisterAsync(vm);
+                await service.RegisterAsync(vm);
+            
             return RedirectToAction("Login", "Account");
 
         }
@@ -45,6 +50,10 @@ namespace Gymon.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginVM vm, string? ReturnUrl = null)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             if (isAuthonticate)
             {
                 // Kullanıcı giriş yapmışsa, rolünü kontrol et
@@ -57,7 +66,9 @@ namespace Gymon.MVC.Controllers
 
                 return RedirectToAction("Index", "Home");  // Diğer kullanıcılar için Home/Index
             }
-            await service.LoginAsync(vm);
+            
+                await service.LoginAsync(vm);
+            
             if (string.IsNullOrEmpty(ReturnUrl))
             {
                 return RedirectToAction("Index", "Home");

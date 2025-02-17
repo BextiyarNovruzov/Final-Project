@@ -20,10 +20,4 @@ public class UserProfile : Profile
              .ForMember(dest => dest.Role, opt => opt.MapFrom(src => Roles.User));
 
     }
-
-        //CreateMap<RegisterVM, User>()
-        //    .ForMember(dest => dest.PasswordHash, opt => opt.Ignore()) // 📌 Şifre hash'lenmeli, otomatik map edilmesin
-        //    .ForMember(dest => dest.Role, opt => opt.MapFrom(src => Roles.User)); // 📌 Varsayılan rol User olacak
-
-
 }

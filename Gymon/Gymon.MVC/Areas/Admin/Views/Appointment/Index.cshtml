@@ -1,0 +1,54 @@
+﻿@using Gymon.Core.Entities
+@model List<Appointment>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Brand Buttons -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <a asp-action="Create" asp-controller="Department" class="m-0 font-weight-bold text-primary">Create</a>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">SportType</th>
+                    <th scope="col">Message or Quesion</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Apply date</th>
+                    <th colspan="2" scope="col">Actions</th>
+                </tr>
+            </thead>
+            @{
+                int counter = 1;
+            }
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@counter</th>
+                        <td>@item.Phone</td>
+                        @* <td>@item.</td> *@
+                        <td>@item.Status</td>
+                        <td>@item.CreatedTime</td>
+                        <td>
+                            <form asp-action="UpdateStatus" method="post">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button type="submit" asp-action="" asp-controller="" value="Confirmed" class="btn btn-success">Confirm</button>
+                                <br />
+                                <button type="submit" asp-action="" asp-controller="" value="Cancelled" class="btn btn-danger">Cancel</button>
+                            </form>
+                        </td>
+                    </tr>
+                    counter++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

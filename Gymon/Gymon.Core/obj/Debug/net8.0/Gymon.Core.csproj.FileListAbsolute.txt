@@ -10,3 +10,16 @@ C:\Users\bexti\source\repos\Gymon\Gymon.Core\obj\Debug\net8.0\refint\Gymon.Core.
 C:\Users\bexti\source\repos\Gymon\Gymon.Core\obj\Debug\net8.0\Gymon.Core.pdb
 C:\Users\bexti\source\repos\Gymon\Gymon.Core\obj\Debug\net8.0\ref\Gymon.Core.dll
 C:\Users\bexti\source\repos\Gymon\Gymon.Core\obj\Debug\net8.0\Gymon.Core.csproj.AssemblyReference.cache
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.Core\bin\Debug\net8.0\Gymon.Core.deps.json
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.Core\bin\Debug\net8.0\Gymon.Core.dll
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.Core\bin\Debug\net8.0\Gymon.Core.pdb
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.Core\obj\Debug\net8.0\Gymon.Core.csproj.AssemblyReference.cache
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.Core\obj\Debug\net8.0\Gymon.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.Core\obj\Debug\net8.0\Gymon.Core.AssemblyInfoInputs.cache
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.Core\obj\Debug\net8.0\Gymon.Core.AssemblyInfo.cs
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.Core\obj\Debug\net8.0\Gymon.Core.csproj.CoreCompileInputs.cache
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.Core\obj\Debug\net8.0\Gymon.Core.sourcelink.json
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.Core\obj\Debug\net8.0\Gymon.Core.dll
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.Core\obj\Debug\net8.0\refint\Gymon.Core.dll
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.Core\obj\Debug\net8.0\Gymon.Core.pdb
+C:\Users\bexti\OneDrive\Рабочий стол\Final Project\Gymon\Gymon.Core\obj\Debug\net8.0\ref\Gymon.Core.dll

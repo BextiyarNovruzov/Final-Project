@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Gymon.MVC.csproj": {}
+    "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\Gymon.MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.BL\\Gymon.BL.csproj": {
+    "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.BL\\Gymon.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.BL\\Gymon.BL.csproj",
+        "projectUniqueName": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.BL\\Gymon.BL.csproj",
         "projectName": "Gymon.BL",
-        "projectPath": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.BL\\Gymon.BL.csproj",
+        "projectPath": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.BL\\Gymon.BL.csproj",
         "packagesPath": "C:\\Users\\bexti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.BL\\obj\\",
+        "outputPath": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.BL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.DAL\\Gymon.DAL.csproj": {
-                "projectPath": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.DAL\\Gymon.DAL.csproj"
+              "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.DAL\\Gymon.DAL.csproj": {
+                "projectPath": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.DAL\\Gymon.DAL.csproj"
               }
             }
           }
@@ -103,14 +103,14 @@
         }
       }
     },
-    "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.Core\\Gymon.Core.csproj": {
+    "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.Core\\Gymon.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.Core\\Gymon.Core.csproj",
+        "projectUniqueName": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.Core\\Gymon.Core.csproj",
         "projectName": "Gymon.Core",
-        "projectPath": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.Core\\Gymon.Core.csproj",
+        "projectPath": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.Core\\Gymon.Core.csproj",
         "packagesPath": "C:\\Users\\bexti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.Core\\obj\\",
+        "outputPath": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -174,14 +174,14 @@
         }
       }
     },
-    "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.DAL\\Gymon.DAL.csproj": {
+    "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.DAL\\Gymon.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.DAL\\Gymon.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.DAL\\Gymon.DAL.csproj",
         "projectName": "Gymon.DAL",
-        "projectPath": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.DAL\\Gymon.DAL.csproj",
+        "projectPath": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.DAL\\Gymon.DAL.csproj",
         "packagesPath": "C:\\Users\\bexti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.DAL\\obj\\",
+        "outputPath": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -202,8 +202,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.Core\\Gymon.Core.csproj": {
-                "projectPath": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.Core\\Gymon.Core.csproj"
+              "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.Core\\Gymon.Core.csproj": {
+                "projectPath": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.Core\\Gymon.Core.csproj"
               }
             }
           }
@@ -259,14 +259,14 @@
         }
       }
     },
-    "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Gymon.MVC.csproj": {
+    "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\Gymon.MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Gymon.MVC.csproj",
+        "projectUniqueName": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\Gymon.MVC.csproj",
         "projectName": "Gymon.MVC",
-        "projectPath": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\Gymon.MVC.csproj",
+        "projectPath": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\Gymon.MVC.csproj",
         "packagesPath": "C:\\Users\\bexti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.MVC\\obj\\",
+        "outputPath": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -287,8 +287,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.BL\\Gymon.BL.csproj": {
-                "projectPath": "C:\\Users\\bexti\\source\\repos\\Gymon\\Gymon.BL\\Gymon.BL.csproj"
+              "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.BL\\Gymon.BL.csproj": {
+                "projectPath": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.BL\\Gymon.BL.csproj"
               }
             }
           }
