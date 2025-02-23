@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Gymon.MVC",
+    "\\Gymon.MVC\\Areas",
+    "\\Gymon.MVC\\Areas\\Admin",
+    "\\Gymon.MVC\\Areas\\Admin\\Views",
+    "\\Gymon.MVC\\Areas\\Admin\\Views\\Category"
   ],
+  "SelectedNode": "\\Gymon.MVC\\Areas\\Admin\\Views\\Category\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

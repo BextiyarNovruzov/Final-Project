@@ -1,8 +1,8 @@
 ﻿using Gymon.Core.Entities;
 using Gymon.Core.Enums;
+using Gymon.Core.Helpers;
 using Gymon.Core.Repostitories;
 using Gymon.DAL.Context;
-using Gymon.DAL.Helpers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -27,6 +27,10 @@ namespace Gymon.DAL.Repositories
             => Table.AsQueryable();
         public async Task<T?> GetByIdAsync(int id)
             => await Table.FindAsync(id);
+        public T GetById(int id)
+        {
+            return Table.Find(id);
+        }
 
         public IQueryable<T> GetWhere(Func<T, bool> expression)
             => Table.Where(expression).AsQueryable();
@@ -85,5 +89,7 @@ namespace Gymon.DAL.Repositories
         {
             return await Table.Where(predicate).ToListAsync();
         }
+
+      
     }   
 }

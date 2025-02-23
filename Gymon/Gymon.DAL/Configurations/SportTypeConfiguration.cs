@@ -33,6 +33,8 @@ namespace Gymon.DAL.Configurations
             builder.HasMany(s => s.TrainerSportTypes)
                 .WithOne(ts => ts.SportType)
                 .HasForeignKey(ts => ts.SportTypeId);
+            builder.Property(s => s.PriceMultiplier)
+            .HasColumnType("decimal(18,4)");
         }
     }
 }

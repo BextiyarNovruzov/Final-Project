@@ -4,8 +4,10 @@ namespace Gymon.Core.Repostitories
 {
     public interface IAppointmentRepository:IGenericRepository<Appointment>
     {
-        Task CreateAsync(Appointment appointment);
-        Task<bool> IsDuplicateAppointmentAsync(int userId, DateTime appointmentDate, TimeSpan appointmentTime);
+        Task<List<Appointment>> GetPendingAppointmentsAsync();
+        Task<bool> ConfirmAppointmentAsync(int id);
+        Task<bool> CancelAppointmentAsync(int id);
+        Task<List<Appointment>> GetAllAppointmentsAsync();
 
     }
 }

@@ -1,0 +1,48 @@
+﻿@using Gymon.BL.ViewModels.ProductAttribute
+@model List<ProductAttributeVM>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Product Attributes for Product @ViewBag.ProductId</h2>
+<a asp-action="Create" asp-route-productId="@ViewBag.ProductId" class="btn btn-primary">Add Attribute</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Colors</th>
+            <th>Sizes</th>
+            <th>Brands</th>
+            <th>Models</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@string.Join(", ", item.ColorIds.Select(colorId => item.Colors.FirstOrDefault(c => c.Id == colorId)?.Name))</td>
+                    <td>@string.Join(", ", item.SizeIds.Select(sizeId => item.Sizes.FirstOrDefault(s => s.Id == sizeId)?.Name))</td>
+                    <td>@item.Brands</td>
+                    <td>@item.Models</td>
+                    <td>
+                        <form asp-action="Delete" method="post">
+                            <input type="hidden" name="id" value="@item.Id" /> <!-- id değerini burada gönderiyoruz -->
+                            <input type="hidden" name="productId" value="@ViewBag.ProductId" /> <!-- Doğru productId'yi gönder -->
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5" class="text-center">No attributes found for this product.</td>
+            </tr>
+        }
+    </tbody>
+</table>

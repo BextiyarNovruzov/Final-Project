@@ -4,107 +4,73 @@ using Gymon.Core.Entities;
 using Gymon.Core.Repostitories;
 using AutoMapper;
 using Gymon.DAL.Repositories;
+using Microsoft.EntityFrameworkCore.Metadata;
+using Gymon.Core.Enums;
 
 namespace Gymon.BL.Services.Implements
 {
-    public class AppointmentService : IAppointmentService
+    public class AppointmentService(IAppointmentRepository _appointmentRepository, ITrainerRepository _trainerRepository, ISportTypeRepository _sportTypeRepository, IMapper _mapper,IEmailService _emailService) : IAppointmentService
     {
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
-
-        public AppointmentService(IUnitOfWork unitOfWork, IMapper mapper)
+        public async Task BookAppointment(AppointmentCreateVM model, int userId)
         {
-            _unitOfWork = unitOfWork;
-            _mapper = mapper;
-        }
-
-        public async Task<IEnumerable<SportType>> GetAllSportTypesAsync()
-        {
-            return await _unitOfWork.SportTypes.GetAllAsync();
-        }
-
-        public async Task<IEnumerable<Trainer>> GetAllTrainersAsync()
-        {
-            return await _unitOfWork.Trainers.GetAllAsync();
-        }
-
-        public async Task<List<Trainer>> GetTrainersBySportTypeAsync(int sportTypeId)
-        {
-            var trainers = await _unitOfWork.Trainers.FindAsync(t => t.TrainerSportTypes.Any(ts => ts.SportTypeId == sportTypeId));
-            return trainers.ToList();
-        }
-
-        public async Task<Appointment> GetAppointmentById(int id)
-        {
-            return await _unitOfWork.Appointments.GetByIdAsync(id);
-        }
-
-        public async Task CreateAppointmentAsync(AppointmentCreateVM model)
-        {
-            if (model.AppointmentDate.Date < DateTime.UtcNow.Date)
-            {
-                throw new ArgumentException("Geçmiş tarihler için randevu oluşturulamaz.");
-            }
-
-            var user = await _unitOfWork.User.GetByIdAsync(model.UserId);
-            var trainer = await _unitOfWork.Trainers.GetByIdAsync(model.TrainerId);
-            var sportType = await _unitOfWork.SportTypes.GetByIdAsync(model.SportTypeId);
-
-            if (user == null || trainer == null || sportType == null)
-            {
-                throw new ArgumentException("User, Trainer veya SportType bulunamadı.");
-            }
-
-            var existingAppointment = await _unitOfWork.Appointments.FindAsync(a =>
-                a.UserId == model.UserId && a.AppointmentDate.Date == model.AppointmentDate.Date);
-            if (existingAppointment.Any())
-            {
-                throw new InvalidOperationException("Bu tarihte zaten bir randevunuz bulunuyor.");
-            }
-
-            var availableSchedule = await _unitOfWork.TrainerSchedules.FindAsync(s =>
-                s.TrainerId == model.TrainerId &&
-                s.AvailableDate.Date == model.AppointmentDate.Date &&
-                s.StartTime <= model.AppointmentTime &&
-                s.EndTime > model.AppointmentTime &&
-                !s.IsBooked);
-
-            if (!availableSchedule.Any())
-            {
-                throw new InvalidOperationException("Seçilen saat için eğitmen müsait değil.");
-            }
-
+            // AutoMapper kullanarak Appointment nesnesini oluştur
             var appointment = _mapper.Map<Appointment>(model);
-            appointment.Email = user.Email;
-            appointment.FullName = user.ComplateName;
-            appointment.Amount = trainer.HourlyRate * sportType.PriceMultiplier;
-            appointment.PaymentStatus = false;
-            appointment.Status = "Pending";
+            appointment.UserId = userId; // Kullanıcıyı atama
+            appointment.Status = AppointmentStatus.Pending; // Durumu ayarla
 
-            await _unitOfWork.Appointments.AddAsync(appointment);
-            await _unitOfWork.CompleteAsync();
+            await _appointmentRepository.AddAsync(appointment);
+            await _appointmentRepository.SaveAsync();
         }
 
-        public async Task UpdateAppointmentAsync(AppointmentCreateVM model)
+        public async Task<List<Appointment>> GetPendingAppointmentsAsync()
         {
-            var appointment = await _unitOfWork.Appointments.GetByIdAsync(model.Id);
-            if (appointment == null) throw new ArgumentException("Randevu bulunamadı.");
-
-            _mapper.Map(model, appointment);
-
-            await _unitOfWork.Appointments.UpdateAsync(appointment);
-            await _unitOfWork.CompleteAsync();
+            return await _appointmentRepository.GetPendingAppointmentsAsync();
         }
 
-        public async Task DeleteAppointmentAsync(int id)
+        public async Task<IEnumerable<Appointment>> GetAllAppointmentsAsync()
         {
-            await _unitOfWork.Appointments.DeleteAsync(id);
-            await _unitOfWork.CompleteAsync();
+            return await _appointmentRepository.GetAllAppointmentsAsync();
+        }
+        public async Task ConfirmAppointmentAsync(int appointmentId)
+        {
+            var appointment = await _appointmentRepository.GetByIdAsync(appointmentId);
+
+            if (appointment == null)
+            {
+                throw new InvalidOperationException($"No appointment found with ID: {appointmentId}");
+            }
+
+            // Update the status to Confirmed using the enum
+            appointment.Status = AppointmentStatus.Confirmed;
+
+            string message = $"Your appointment is confirmed for {appointment.AppointmentDate.ToShortDateString()} " +
+                             $"{appointment.AppointmentTime}.";
+
+            // Logic to send confirmation message...
+
+            await _appointmentRepository.UpdateAsync(appointment); // Save changes
         }
 
-        public async Task<IEnumerable<SportType>> GetAllSportTypeAsync()
+
+        public async Task CancelAppointmentAsync(int appointmentId)
         {
-            return await _unitOfWork.SportTypes.GetAllAsync();
+            var appointment = await _appointmentRepository.GetByIdAsync(appointmentId);
+
+            if (appointment == null)
+            {
+                // Handle the case where the appointment is not found
+                throw new Exception("Appointment not found.");
+            }
+
+            // Proceed with canceling the appointment
+            appointment.Status = AppointmentStatus.Canceled; // Update status or perform your logic
+
+            string message = $"Your appointment for {appointment.AppointmentDate.ToShortDateString()} " +
+                             $"{appointment.AppointmentTime} has been canceled.";
+            // Logic to send the cancellation message...
+
+            await _appointmentRepository.UpdateAsync(appointment); // Save changes to the database
         }
+
     }
 }

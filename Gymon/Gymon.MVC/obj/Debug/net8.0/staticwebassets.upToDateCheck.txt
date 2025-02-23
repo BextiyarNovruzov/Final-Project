@@ -1915,7 +1915,14 @@ wwwroot\assets\js\sweetalert.min.js
 wwwroot\assets\license\license.html
 wwwroot\assets\videos\video.mp4
 wwwroot\favicon.ico
+wwwroot\imgs\036b9982-01c9-45fe-be36-5c14a00d00fc.jpg
+wwwroot\imgs\201077ca-b9a8-443b-a1b2-5a9fec07bba3.JPG
 wwwroot\imgs\4ac3d6f9-54cf-43f9-accf-a35ac29b2ecf.jpg
+wwwroot\imgs\66fac2f3-98c0-4cf5-9004-d7026d068328.jpg
+wwwroot\imgs\b9cc4ac3-553e-4a52-8117-3e108de27b49.jpg
+wwwroot\imgs\d12e5a35-c752-4923-9374-c58fd6e14231.jpg
+wwwroot\imgs\products\20d00444-1cb2-4f29-b094-cc71b0db1ac3.jpg
+wwwroot\imgs\products\6c4d127b-0082-4d23-a07c-7ba0844067ea.jpg
 wwwroot\imgs\trainers\0g5tt45k.may.jpg
 wwwroot\imgs\trainers\1b5tpybr.bux.jpg
 wwwroot\imgs\trainers\1ed4d252-8ee9-4d14-a9c7-b5d2681ae967.jpg
@@ -1940,6 +1947,8 @@ wwwroot\imgs\trainers\d011de6f-7fa8-4cdb-b732-e1191dd1bef5.jpg
 wwwroot\imgs\trainers\d0407d94-db89-44dc-95cf-8ad11cd2578b.jpg
 wwwroot\imgs\trainers\d3ef7238-33e4-4f99-a3ac-e6d97e0de75f.jpg
 wwwroot\imgs\trainers\e3a736b3-b8da-40a5-8fa3-3b9be3b32c26.jpg
+wwwroot\imgs\trainers\e779d806-7c5c-4a23-a42a-d9d26d4592bd.jpg
+wwwroot\imgs\trainers\ebae6a04-bf35-4f74-914c-f026f97e8fe1.jpg
 wwwroot\imgs\trainers\ef5d9242-fa76-4fe4-b3ec-f37fe5362ae6.jpg
 wwwroot\imgs\trainers\f5189d24-b3c3-40b9-a124-258ad08550d4.jpg
 wwwroot\imgs\trainers\ff55bc8b-b153-4b62-a533-d489fffbd148.jpg
@@ -2009,3 +2018,7 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\wwwroot\imgs\products\138897ff-f241-4c10-9e76-31b877eacbd0.JPG
+wwwroot\wwwroot\imgs\products\6c203d24-f629-43cd-be8c-1710fe3c9dd6.JPG
+wwwroot\wwwroot\imgs\products\ac467c35-bb9d-4710-ace1-dc2b3980653d.jpg
+wwwroot\wwwroot\imgs\products\ff84322a-2144-406b-843d-93bf837b7ba9.jpg

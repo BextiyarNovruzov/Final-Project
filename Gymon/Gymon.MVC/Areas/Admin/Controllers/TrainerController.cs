@@ -53,7 +53,6 @@ public class TrainerController(ITrainerService service,ISportTypeService sportTy
             bool result = await service.CreateAsync(model);
             if (result)
             {
-                TempData["SuccessMessage"] = "Trainer successfully created!";
                 return RedirectToAction("Index");
             }
             ModelState.AddModelError("", "An error occurred while saving the trainer.");
@@ -137,6 +136,7 @@ public class TrainerController(ITrainerService service,ISportTypeService sportTy
 
     public async Task<IActionResult> Delete(int id)
     {
+
         await service.DeleteTrainerAsync(id);
         return RedirectToAction("Index"); 
     }

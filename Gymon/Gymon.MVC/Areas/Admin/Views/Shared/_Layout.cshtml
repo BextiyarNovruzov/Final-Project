@@ -18,7 +18,7 @@
 
     <!-- Custom styles for this template-->
     <link href="~/admin/css/sb-admin-2.min.css" rel="stylesheet">
-
+    @RenderSection("Styles", required: false)
 </head>
 
 <body id="page-top">
@@ -47,7 +47,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a asp-action="Index" asp-controller="Appointment" class="nav-link collapsed">
+                <a asp-action="Index" asp-controller="AppointmentForAdmin" class="nav-link collapsed">
                     <span>Appointments</span>
                 </a>
 
@@ -70,6 +70,37 @@
                 </a>
             </li>
 
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a asp-action="Index" asp-controller="Category" class="nav-link collapsed">
+                    <span>Categoryes</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a asp-action="Index" asp-controller="Product" class="nav-link collapsed">
+                    <span>Products</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a asp-action="Colors" asp-controller="Attributes" class="nav-link collapsed">
+                    <span>Colors</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a asp-action="Sizes" asp-controller="Attributes" class="nav-link collapsed">
+                    <span>Sizes</span>
+                </a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -159,7 +190,7 @@
             </div>
         </div>
     </div>
-
+    @RenderSection("Scripts", required: false)
     <!-- Bootstrap core JavaScript-->
     <script src="~/admin/vendor/jquery/jquery.min.js"></script>
     <script src="~/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

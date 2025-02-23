@@ -21,11 +21,7 @@ namespace Gymon.Core.Entities
         public DateTime AppointmentDate { get; set; }
         public TimeSpan AppointmentTime { get; set; }
 
-        public decimal Amount { get; set; }
-        public string PaymentMethod { get; set; } // Online veya Yerinde
-
-        public bool PaymentStatus { get; set; } // Ödeme durumu
-        public string Status { get; set; } // Onay, Red, vb.
+        public AppointmentStatus Status { get; set; }
 
         // User'ı almak için ilişkiyi belirtelim
         public string Email { get; set; }  // User Email

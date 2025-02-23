@@ -28,7 +28,7 @@
                                             <ul class="sub-menu">
                                                 <li><a asp-action="Product" asp-controller="Shop">Our Products</a></li>
                                                 <li><a asp-action="ProductDetails" asp-controller="Shop">Product Details</a></li>
-                                                <li><a asp-action="Cart" asp-controller="Shop">Shop Cart</a></li>
+                                                <li><a asp-action="Cart" asp-controller="Cart">Shop Cart</a></li>
                                                 <li><a asp-action="CartCheckout" asp-controller="Shop">Cart Checkout</a></li>
                                             </ul>
                                         </li>
@@ -59,7 +59,9 @@
                                     </ul>
                                     <ul>
                                         @* Appointment butonu *@
-                                        <a asp-action="BookAppointment" asp-controller="Appointment" class="btn btn-danger"> Appointment</a>
+                                        <a asp-action="BookAppointment" asp-controller="Appointment" class="nav-link collapsed">
+                                            <span>Appointments</span>
+                                        </a>
                                         <ul />
                                 </div>
                             </div>

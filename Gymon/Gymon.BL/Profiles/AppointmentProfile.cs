@@ -11,7 +11,9 @@ namespace Gymon.BL.Profiles
         public AppointmentProfile()
         {
             CreateMap<AppointmentCreateVM, Appointment>()
-                .ForMember(dest => dest.UserId, opt => opt.MapFrom<UserIdResolver>());
+            .ForMember(dest => dest.UserId, opt => opt.Ignore()) // UserId, Controller'da atanacak
+            .ForMember(dest => dest.Trainer, opt => opt.Ignore()) // İlişkiyi Controller'da çöz
+            .ForMember(dest => dest.SportType, opt => opt.Ignore()); 
         }
     }
 

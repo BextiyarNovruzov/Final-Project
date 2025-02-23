@@ -1,4 +1,5 @@
-﻿
+﻿@using Gymon.BL.ViewModels.ProductVMs
+@model ProductListVM
 @{
     ViewData["Title"] = "Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,7 +12,7 @@
         <div class="row">
             <div class="banner-details">
                 <h2>Product</h2>
-                <p>our values and vaulted us to the top of our industry.</p>
+                <p>Our values have vaulted us to the top of our industry.</p>
             </div>
         </div>
     </div>
@@ -20,13 +21,13 @@
             <div class="row">
                 <ul>
                     <li>
-                        <a href="index.html">
+                        <a href="@Url.Action("Product", "Home")">
                             <i class="fa-solid fa-house"></i>
                             <p>Home</p>
                         </a>
                     </li>
                     <li class="current">
-                        <p>Product </p>
+                        <p>Product</p>
                     </li>
                 </ul>
             </div>
@@ -40,7 +41,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="shop-filter">
-                    <p>145 Products</p>
+                    <p>@Model.Products.Count() Products</p>
                     <div class="gird-list d-flex-all">
                         <a class="d-flex-all list" href="javascript:void(0)">
                             <i class="fa-solid fa-list"></i>
@@ -53,229 +54,77 @@
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="row p-slider align-items-center justify-content-between grid">
-            <div class="col-lg-4">
-                <div class="product">
-                    <div class="main-data">
-                        <div class="btn-hover">
-                            <figure>
-                                <img src="https://via.placeholder.com/336x216" alt="Product Image 1">
-                            </figure>
-                            <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                        <div class="data">
-                            <div class="ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <span>5.0</span>
+            @foreach (var product in Model.Products)
+            {
+                <div class="col-lg-4">
+                    <div class="product">
+                        <div class="main-data">
+                            <div class="btn-hover">
+                                <figure>
+                                    <img src="@product.CoverImage" alt="@product.Name">
+                                </figure>
+                                <form asp-action="AddToCart" asp-controller="Shop" method="post">
+                                    <input type="hidden" name="ProductId" value="@product.Id" />
+                                    <input type="number" name="Quantity" value="1" min="1" />
+                                    <button type="submit" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></button>
+                                </form>
+
                             </div>
-                            <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                            <div class="price-range">
-                                <span>$18.60</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="product">
-                    <div class="main-data">
-                        <div class="btn-hover">
-                            <figure>
-                                <img src="https://via.placeholder.com/336x216" alt="Product Image 2">
-                            </figure>
-                            <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                        <div class="data">
-                            <div class="ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <span>5.0</span>
-                            </div>
-                            <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                            <div class="price-range">
-                                <span>$18.60</span>
+                            <div class="data">
+                                <div class="ratings">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>@product.Rating</span>
+                                </div>
+                                <h3>
+                                    <a asp-action="ProductDetails" asp-controller="Shop" asp-route-id="@product.Id">@product.Name</a>
+                                </h3>
+                                <div class="price-range">
+                                    @if (product.DiscountedPrice < product.SellPrice)
+                                    {
+                                        <span style="text-decoration: line-through; color: red;">$@product.SellPrice</span>
+                                    }
+                                    <span>$@product.DiscountedPrice</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="product">
-                    <div class="main-data">
-                        <div class="btn-hover">
-                            <figure>
-                                <img src="https://via.placeholder.com/336x216" alt="Product Image 2">
-                            </figure>
-                            <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                        <div class="data">
-                            <div class="ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <span>5.0</span>
-                            </div>
-                            <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                            <div class="price-range">
-                                <span>$18.60</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="product">
-                    <div class="main-data">
-                        <div class="btn-hover">
-                            <figure>
-                                <img src="https://via.placeholder.com/336x216" alt="Product Image 2">
-                            </figure>
-                            <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                        <div class="data">
-                            <div class="ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <span>5.0</span>
-                            </div>
-                            <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                            <div class="price-range">
-                                <span>$18.60</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="product">
-                    <div class="main-data">
-                        <div class="btn-hover">
-                            <figure>
-                                <img src="https://via.placeholder.com/336x216" alt="Product Image 2">
-                            </figure>
-                            <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                        <div class="data">
-                            <div class="ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <span>5.0</span>
-                            </div>
-                            <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                            <div class="price-range">
-                                <span>$18.60</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="product">
-                    <div class="main-data">
-                        <div class="btn-hover">
-                            <figure>
-                                <img src="https://via.placeholder.com/336x216" alt="Product Image 2">
-                            </figure>
-                            <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                        <div class="data">
-                            <div class="ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <span>5.0</span>
-                            </div>
-                            <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                            <div class="price-range">
-                                <span>$18.60</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="product">
-                    <div class="main-data">
-                        <div class="btn-hover">
-                            <figure>
-                                <img src="https://via.placeholder.com/336x216" alt="Product Image 2">
-                            </figure>
-                            <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                        <div class="data">
-                            <div class="ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <span>5.0</span>
-                            </div>
-                            <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                            <div class="price-range">
-                                <span>$18.60</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="product">
-                    <div class="main-data">
-                        <div class="btn-hover">
-                            <figure>
-                                <img src="https://via.placeholder.com/336x216" alt="Product Image 2">
-                            </figure>
-                            <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                        <div class="data">
-                            <div class="ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <span>5.0</span>
-                            </div>
-                            <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                            <div class="price-range">
-                                <span>$18.60</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="product">
-                    <div class="main-data">
-                        <div class="btn-hover">
-                            <figure>
-                                <img src="https://via.placeholder.com/336x216" alt="Product Image 2">
-                            </figure>
-                            <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                        <div class="data">
-                            <div class="ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <span>5.0</span>
-                            </div>
-                            <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                            <div class="price-range">
-                                <span>$18.60</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                </div>
-            </div>
+            }
         </div>
     </div>
+
     <div class="container">
         <div class="row">
             <div class="gym-pagination">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="JavaScript:void(0)"><i class='fa-solid fa-arrow-left-long'></i></a></li>
-                        <li class="page-item"><a class="page-link" href="JavaScript:void(0)">01</a></li>
-                        <li class="page-item"><a class="page-link" href="JavaScript:void(0)">02</a></li>
-                        <li class="page-item"><a class="page-link" href="JavaScript:void(0)">03</a></li>
-                        <li class="page-item space"><a class="page-link" href="JavaScript:void(0)">..........</a></li>
-                        <li class="page-item"><a class="page-link" href="JavaScript:void(0)">08</a></li>
-                        <li class="page-item"><a class="page-link" href="JavaScript:void(0)"><i class='fa-solid fa-arrow-right-long'></i> </a></li>
+                        @if (Model.PageNumber > 1)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" href="@Url.Action("Product", new { page = Model.PageNumber - 1 })">
+                                    <i class='fa-solid fa-arrow-left-long'></i>
+                                </a>
+                            </li>
+                        }
+
+                        @for (int i = 1; i <= Model.TotalPages; i++)
+                        {
+                            <li class="page-item @(Model.PageNumber == i ? "active" : "")">
+                                <a class="page-link" href="@Url.Action("Product", new { page = i })">@i</a>
+                            </li>
+                        }
+
+                        @if (Model.PageNumber < Model.TotalPages)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" href="@Url.Action("Product", new { page = Model.PageNumber + 1 })">
+                                    <i class='fa-solid fa-arrow-right-long'></i>
+                                </a>
+                            </li>
+                        }
                     </ul>
                 </nav>
             </div>

@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 
 namespace Gymon.BL.Services.Imlements
 {
-    public class FileService(IWebHostEnvironment web) : IFileService
+    public class FileService : IFileService
     {
-        private readonly string _uploadDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/imgs");
-        private static readonly string[] AllowedExtensions = { ".jpg", ".jpeg", ".png" };
-        private const int MaxFileSize = 5 * 1024 * 1024; //
-                                                         // 
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
+        public FileService(IWebHostEnvironment webHostEnvironment)
+        {
+            _webHostEnvironment = webHostEnvironment;
+        }
 
         public async Task<string> SaveImageAsync(IFormFile file, string folderPath)
         {
@@ -35,34 +36,7 @@ namespace Gymon.BL.Services.Imlements
                 await file.CopyToAsync(fileStream);
             }
 
-            return fileName;
-        }
-
-
-        public async Task<string> UploadFileAsync(IFormFile file)
-        {
-            if (file == null || file.Length == 0)
-                throw new ArgumentException("Dosya boş olamaz.");
-
-            var extension = Path.GetExtension(file.FileName).ToLower();
-            var allowedExtensions = new string[] { ".jpg", ".jpeg", ".png" };
-            if (!allowedExtensions.Contains(extension))
-                throw new ArgumentException("Sadece .jpg, .jpeg veya .png uzantılı dosyalar yüklenebilir.");
-
-            if (file.Length > 5 * 1024 * 1024) // 5MB
-                throw new ArgumentException("Dosya boyutu 5MB'dan küçük olmalıdır.");
-
-            var fileName = $"{Guid.NewGuid()}{extension}";
-            var filePath = Path.Combine(_uploadDirectory, fileName);
-
-            // Dosya yükleme işlemi
-            Directory.CreateDirectory(_uploadDirectory);
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            return $"/imgs/{fileName}"; // URL olarak döndürülür
+            return fileName; // Return just the file name for URL
         }
 
         public void DeleteFile(string filePath)
@@ -78,4 +52,5 @@ namespace Gymon.BL.Services.Imlements
             }
         }
     }
+
 }

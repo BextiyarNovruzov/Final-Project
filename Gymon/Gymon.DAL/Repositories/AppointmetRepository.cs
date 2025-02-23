@@ -1,4 +1,5 @@
 ﻿using Gymon.Core.Entities;
+using Gymon.Core.Enums;
 using Gymon.Core.Repostitories;
 using Gymon.DAL.Context;
 using Microsoft.EntityFrameworkCore;
@@ -19,17 +20,43 @@ namespace Gymon.DAL.Repositories
         {
             _context = context;
         }
-        public async Task CreateAsync(Appointment appointment)
+        public async Task<List<Appointment>> GetPendingAppointmentsAsync()
         {
-            await _context.Appointments.AddAsync(appointment);
-            await _context.SaveChangesAsync();
+            var result = await FindAsync(a => a.Status == AppointmentStatus.Pending); // Önce bekle
+            return result.ToList(); // Sonra listeye çevir
         }
 
-        // Aynı tarih ve saatte daha önce randevu alıp almadığını kontrol eder
-        public async Task<bool> IsDuplicateAppointmentAsync(int userId, DateTime appointmentDate, TimeSpan appointmentTime)
+
+        public async Task<bool> ConfirmAppointmentAsync(int id)
         {
-            return await _context.Appointments
-                .AnyAsync(a => a.UserId == userId && a.AppointmentDate.Date == appointmentDate.Date && a.AppointmentTime == appointmentTime);
+            var appointment = await GetByIdAsync(id);
+            if (appointment == null) return false;
+
+            appointment.Status = AppointmentStatus.Confirmed;
+            await UpdateAsync(appointment);
+            await SaveChangesAsync();
+
+            return true;
+        }
+        public async Task<List<Appointment>> GetAllAppointmentsAsync()
+        {
+            return await _context.Set<Appointment>()
+                .Include(a => a.Trainer) // Include Trainer
+                .Include(a => a.SportType) // Include SportType
+                .ToListAsync();
+        }
+
+
+        public async Task<bool> CancelAppointmentAsync(int id)
+        {
+            var appointment = await GetByIdAsync(id);
+            if (appointment == null) return false;
+
+            appointment.Status = AppointmentStatus.Canceled;
+            await UpdateAsync(appointment);
+            await SaveChangesAsync();
+
+            return true;
         }
     }
 }

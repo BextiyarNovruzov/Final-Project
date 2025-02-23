@@ -21,7 +21,6 @@ namespace Gymon.BL.Services.Imlements
             return await _trainerRepository.GetAllAsync();
         }
 
-
         public async Task<bool> CreateAsync(CreateTrainerVM model)
         {
             if (model == null) throw new ArgumentNullException(nameof(model));
@@ -29,8 +28,8 @@ namespace Gymon.BL.Services.Imlements
             // Map the ViewModel to the entity
             var trainer = _mapper.Map<Trainer>(model);
 
-            // Handle the image upload
-            string uploadsFolder = "imgs/trainers";
+            // Get the full path for uploads
+            string uploadsFolder = Path.Combine("wwwroot", "imgs", "trainers");
             string imageUrl = await _fileService.SaveImageAsync(model.Image, uploadsFolder);
 
             // Set the image URL
@@ -42,6 +41,7 @@ namespace Gymon.BL.Services.Imlements
             // Save changes to the database
             return await _trainerRepository.SaveAsync() > 0;
         }
+
 
 
         public async Task DeleteTrainerAsync(int id)

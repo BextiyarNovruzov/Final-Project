@@ -5,6 +5,7 @@ namespace Gymon.Core.Repostitories;
 public interface IGenericRepository<T> where T : BaseEntity, new()
 {
     IQueryable<T> GetAll();
+    T   GetById(int id);
     Task<T?> GetByIdAsync(int id);
     User GetByUsername(string username);
     Task<User?> GetUserByUsernameAsync(string username);
@@ -18,7 +19,7 @@ public interface IGenericRepository<T> where T : BaseEntity, new()
     Task AddAsync(T entity);
     void Delete(T entity);
     Task<bool> DeleteAsync(int? id);
-    Task UpdateAsync(T entity);
+    Task UpdateAsync(T entity); 
     Task<int> SaveAsync();
     Task SaveChangesAsync();
 

@@ -1,0 +1,41 @@
+﻿@using Gymon.BL.ViewModels.AppointmentVM
+@model IEnumerable<AppointmentListVM>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h2>Appointments</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Trainer Name</th>
+            <th>Sport Type</th>
+            <th>Appointment Date</th>
+            <th>Appointment Time</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var appointment in Model)
+        {
+            <tr>
+                <td>@appointment.TrainerName</td>
+                <td>@appointment.SportType</td>
+                <td>@appointment.AppointmentDate.ToShortDateString()</td>
+                <td>@appointment.AppointmentTime</td>
+                <td>@appointment.Status</td>
+                <td>
+                    <form asp-action="Confirm" method="post">
+                        <input type="hidden" name="id" value="@appointment.Id" />
+                        <button type="submit">Confirm</button>
+                    </form>
+                    <form asp-action="Cancel" method="post">
+                        <input type="hidden" name="id" value="@appointment.Id" />
+                        <button type="submit">Cancel</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

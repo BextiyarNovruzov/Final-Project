@@ -7673,8 +7673,36 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\imgs\\036b9982-01c9-45fe-be36-5c14a00d00fc.jpg",
+      "PackagePath": "staticwebassets\\imgs\\036b9982-01c9-45fe-be36-5c14a00d00fc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\imgs\\201077ca-b9a8-443b-a1b2-5a9fec07bba3.JPG",
+      "PackagePath": "staticwebassets\\imgs\\201077ca-b9a8-443b-a1b2-5a9fec07bba3.JPG"
+    },
+    {
       "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\imgs\\4ac3d6f9-54cf-43f9-accf-a35ac29b2ecf.jpg",
       "PackagePath": "staticwebassets\\imgs\\4ac3d6f9-54cf-43f9-accf-a35ac29b2ecf.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\imgs\\66fac2f3-98c0-4cf5-9004-d7026d068328.jpg",
+      "PackagePath": "staticwebassets\\imgs\\66fac2f3-98c0-4cf5-9004-d7026d068328.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\imgs\\b9cc4ac3-553e-4a52-8117-3e108de27b49.jpg",
+      "PackagePath": "staticwebassets\\imgs\\b9cc4ac3-553e-4a52-8117-3e108de27b49.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\imgs\\d12e5a35-c752-4923-9374-c58fd6e14231.jpg",
+      "PackagePath": "staticwebassets\\imgs\\d12e5a35-c752-4923-9374-c58fd6e14231.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\imgs\\products\\20d00444-1cb2-4f29-b094-cc71b0db1ac3.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\20d00444-1cb2-4f29-b094-cc71b0db1ac3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\imgs\\products\\6c4d127b-0082-4d23-a07c-7ba0844067ea.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\6c4d127b-0082-4d23-a07c-7ba0844067ea.jpg"
     },
     {
       "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\imgs\\trainers\\0g5tt45k.may.jpg",
@@ -7771,6 +7799,14 @@
     {
       "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\imgs\\trainers\\e3a736b3-b8da-40a5-8fa3-3b9be3b32c26.jpg",
       "PackagePath": "staticwebassets\\imgs\\trainers\\e3a736b3-b8da-40a5-8fa3-3b9be3b32c26.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\imgs\\trainers\\e779d806-7c5c-4a23-a42a-d9d26d4592bd.jpg",
+      "PackagePath": "staticwebassets\\imgs\\trainers\\e779d806-7c5c-4a23-a42a-d9d26d4592bd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\imgs\\trainers\\ebae6a04-bf35-4f74-914c-f026f97e8fe1.jpg",
+      "PackagePath": "staticwebassets\\imgs\\trainers\\ebae6a04-bf35-4f74-914c-f026f97e8fe1.jpg"
     },
     {
       "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\imgs\\trainers\\ef5d9242-fa76-4fe4-b3ec-f37fe5362ae6.jpg",
@@ -8047,6 +8083,22 @@
     {
       "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\wwwroot\\imgs\\products\\138897ff-f241-4c10-9e76-31b877eacbd0.JPG",
+      "PackagePath": "staticwebassets\\wwwroot\\imgs\\products\\138897ff-f241-4c10-9e76-31b877eacbd0.JPG"
+    },
+    {
+      "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\wwwroot\\imgs\\products\\6c203d24-f629-43cd-be8c-1710fe3c9dd6.JPG",
+      "PackagePath": "staticwebassets\\wwwroot\\imgs\\products\\6c203d24-f629-43cd-be8c-1710fe3c9dd6.JPG"
+    },
+    {
+      "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\wwwroot\\imgs\\products\\ac467c35-bb9d-4710-ace1-dc2b3980653d.jpg",
+      "PackagePath": "staticwebassets\\wwwroot\\imgs\\products\\ac467c35-bb9d-4710-ace1-dc2b3980653d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bexti\\OneDrive\\Рабочий стол\\Final Project\\Gymon\\Gymon.MVC\\wwwroot\\wwwroot\\imgs\\products\\ff84322a-2144-406b-843d-93bf837b7ba9.jpg",
+      "PackagePath": "staticwebassets\\wwwroot\\imgs\\products\\ff84322a-2144-406b-843d-93bf837b7ba9.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Gymon.MVC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

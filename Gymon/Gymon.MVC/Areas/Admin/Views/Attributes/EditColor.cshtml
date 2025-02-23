@@ -1,0 +1,24 @@
+﻿@using Gymon.Core.Entities.ProductAttributies
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@model Color
+
+@{
+    ViewData["Title"] = "Edit Color";
+}
+
+<h2>Edit Color</h2>
+
+<form asp-action="EditColor" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Colors" class="btn btn-secondary">Back to List</a>
+</form>

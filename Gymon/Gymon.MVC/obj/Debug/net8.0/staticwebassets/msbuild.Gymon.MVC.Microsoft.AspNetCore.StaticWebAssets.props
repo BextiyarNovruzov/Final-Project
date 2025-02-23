@@ -34524,6 +34524,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Gymon.MVC.9ga1pnk93j.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\036b9982-01c9-45fe-be36-5c14a00d00fc.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Gymon.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Gymon.MVC</BasePath>
+      <RelativePath>imgs/036b9982-01c9-45fe-be36-5c14a00d00fc.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>e5tlnt4dar</Fingerprint>
+      <Integrity>0hG9N2MUmikP1BLBJsR2jLA4+XGso7N3I61jaX2CNpU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\036b9982-01c9-45fe-be36-5c14a00d00fc.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\201077ca-b9a8-443b-a1b2-5a9fec07bba3.JPG'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Gymon.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Gymon.MVC</BasePath>
+      <RelativePath>imgs/201077ca-b9a8-443b-a1b2-5a9fec07bba3.JPG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qmzx6c97wy</Fingerprint>
+      <Integrity>ovi0QhyteWZBdJ3PaGIgssgZn4ltRx1qpwpB/NKGcwM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\201077ca-b9a8-443b-a1b2-5a9fec07bba3.JPG'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\4ac3d6f9-54cf-43f9-accf-a35ac29b2ecf.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Gymon.MVC</SourceId>
@@ -34541,6 +34577,96 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\4ac3d6f9-54cf-43f9-accf-a35ac29b2ecf.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\66fac2f3-98c0-4cf5-9004-d7026d068328.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Gymon.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Gymon.MVC</BasePath>
+      <RelativePath>imgs/66fac2f3-98c0-4cf5-9004-d7026d068328.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>o9ldts0sgf</Fingerprint>
+      <Integrity>FCYKES7KQoe1aAiVEt3lb9MHoex6oQCDn9YUiaqGnrc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\66fac2f3-98c0-4cf5-9004-d7026d068328.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\b9cc4ac3-553e-4a52-8117-3e108de27b49.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Gymon.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Gymon.MVC</BasePath>
+      <RelativePath>imgs/b9cc4ac3-553e-4a52-8117-3e108de27b49.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>n0j81y5eht</Fingerprint>
+      <Integrity>R0sRys730DlTUql4Q6mVH8kDATmdqlaTsuPHwFdPsX0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\b9cc4ac3-553e-4a52-8117-3e108de27b49.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\d12e5a35-c752-4923-9374-c58fd6e14231.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Gymon.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Gymon.MVC</BasePath>
+      <RelativePath>imgs/d12e5a35-c752-4923-9374-c58fd6e14231.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>n0j81y5eht</Fingerprint>
+      <Integrity>R0sRys730DlTUql4Q6mVH8kDATmdqlaTsuPHwFdPsX0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\d12e5a35-c752-4923-9374-c58fd6e14231.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\products\20d00444-1cb2-4f29-b094-cc71b0db1ac3.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Gymon.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Gymon.MVC</BasePath>
+      <RelativePath>imgs/products/20d00444-1cb2-4f29-b094-cc71b0db1ac3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>cdsz4nmwzm</Fingerprint>
+      <Integrity>YBqTMeeEMEt4vnawY11F+6/J6WlArOi3PtbtAN/eEyE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\products\20d00444-1cb2-4f29-b094-cc71b0db1ac3.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\products\6c4d127b-0082-4d23-a07c-7ba0844067ea.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Gymon.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Gymon.MVC</BasePath>
+      <RelativePath>imgs/products/6c4d127b-0082-4d23-a07c-7ba0844067ea.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>n0j81y5eht</Fingerprint>
+      <Integrity>R0sRys730DlTUql4Q6mVH8kDATmdqlaTsuPHwFdPsX0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\products\6c4d127b-0082-4d23-a07c-7ba0844067ea.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\trainers\0g5tt45k.may.jpg'))">
       <SourceType>Package</SourceType>
@@ -34973,6 +35099,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\trainers\e3a736b3-b8da-40a5-8fa3-3b9be3b32c26.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\trainers\e779d806-7c5c-4a23-a42a-d9d26d4592bd.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Gymon.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Gymon.MVC</BasePath>
+      <RelativePath>imgs/trainers/e779d806-7c5c-4a23-a42a-d9d26d4592bd.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>n0j81y5eht</Fingerprint>
+      <Integrity>R0sRys730DlTUql4Q6mVH8kDATmdqlaTsuPHwFdPsX0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\trainers\e779d806-7c5c-4a23-a42a-d9d26d4592bd.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\trainers\ebae6a04-bf35-4f74-914c-f026f97e8fe1.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Gymon.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Gymon.MVC</BasePath>
+      <RelativePath>imgs/trainers/ebae6a04-bf35-4f74-914c-f026f97e8fe1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>e5tlnt4dar</Fingerprint>
+      <Integrity>0hG9N2MUmikP1BLBJsR2jLA4+XGso7N3I61jaX2CNpU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\trainers\ebae6a04-bf35-4f74-914c-f026f97e8fe1.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\trainers\ef5d9242-fa76-4fe4-b3ec-f37fe5362ae6.jpg'))">
       <SourceType>Package</SourceType>
@@ -36215,6 +36377,78 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\wwwroot\imgs\products\138897ff-f241-4c10-9e76-31b877eacbd0.JPG'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Gymon.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Gymon.MVC</BasePath>
+      <RelativePath>wwwroot/imgs/products/138897ff-f241-4c10-9e76-31b877eacbd0.JPG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qmzx6c97wy</Fingerprint>
+      <Integrity>ovi0QhyteWZBdJ3PaGIgssgZn4ltRx1qpwpB/NKGcwM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\wwwroot\imgs\products\138897ff-f241-4c10-9e76-31b877eacbd0.JPG'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\wwwroot\imgs\products\6c203d24-f629-43cd-be8c-1710fe3c9dd6.JPG'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Gymon.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Gymon.MVC</BasePath>
+      <RelativePath>wwwroot/imgs/products/6c203d24-f629-43cd-be8c-1710fe3c9dd6.JPG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qmzx6c97wy</Fingerprint>
+      <Integrity>ovi0QhyteWZBdJ3PaGIgssgZn4ltRx1qpwpB/NKGcwM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\wwwroot\imgs\products\6c203d24-f629-43cd-be8c-1710fe3c9dd6.JPG'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\wwwroot\imgs\products\ac467c35-bb9d-4710-ace1-dc2b3980653d.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Gymon.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Gymon.MVC</BasePath>
+      <RelativePath>wwwroot/imgs/products/ac467c35-bb9d-4710-ace1-dc2b3980653d.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>n0j81y5eht</Fingerprint>
+      <Integrity>R0sRys730DlTUql4Q6mVH8kDATmdqlaTsuPHwFdPsX0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\wwwroot\imgs\products\ac467c35-bb9d-4710-ace1-dc2b3980653d.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\wwwroot\imgs\products\ff84322a-2144-406b-843d-93bf837b7ba9.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Gymon.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Gymon.MVC</BasePath>
+      <RelativePath>wwwroot/imgs/products/ff84322a-2144-406b-843d-93bf837b7ba9.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>n0j81y5eht</Fingerprint>
+      <Integrity>R0sRys730DlTUql4Q6mVH8kDATmdqlaTsuPHwFdPsX0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\wwwroot\imgs\products\ff84322a-2144-406b-843d-93bf837b7ba9.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

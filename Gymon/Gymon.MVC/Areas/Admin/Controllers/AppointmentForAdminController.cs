@@ -1,6 +1,8 @@
 ﻿using Gymon.BL.Services.Imlements;
+using Gymon.BL.Services.Implements;
 using Gymon.BL.Services.Interfaces;
 using Gymon.BL.ViewModels.AppointmentVM;
+using Gymon.Core.Entities;
 using Gymon.Core.Enums;
 using Gymon.Core.Repostitories;
 using Microsoft.AspNetCore.Authorization;
@@ -10,26 +12,39 @@ using Microsoft.EntityFrameworkCore;
 namespace Gymon.MVC.Areas.Admin.Controllers;
 [Area("Admin")]
 [Authorize(Roles =nameof(Roles.Admin))]
-public class AppointmentForAdminController(IAppointmentService service) : Controller
+public class AppointmentForAdminController(IAppointmentService _appointmentService) : Controller
 {
-    //[HttpGet]
-    //public async Task<IActionResult> ConfirmAppointment(int id)
-    //{
-    //    var appointment = await _appointmentService.GetByIdAsync(id);
-    //    if (appointment == null) return NotFound();
+    [HttpGet]
+    public async Task<IActionResult> Index()
+    {
+        var appointments = await _appointmentService.GetAllAppointmentsAsync();
+        var model = appointments.Select(a => new AppointmentListVM
+        {
+            Id = a.Id,
+            TrainerName = a.Trainer.FullName,
+            SportType = a.SportType.Name,
+            AppointmentDate = a.AppointmentDate,
+            AppointmentTime = a.AppointmentTime,
+            Status = a.Status.ToString() // Ensure Status is converted to string
+        }).ToList();
 
-    //    var trainers = await _trainerService.GetAllAsync(); // Eğitmenleri çek
+        return View(model);
+    }
+    
 
-    //    var model = new ConfirmAppointmentVM
-    //    {
-    //        AppointmentId = appointment.Id,
-    //        FullName = appointment.FullName,
-    //        Email = appointment.Email,
-    //        Phone = appointment.Phone,
-    //        SportType = appointment.SportType,
-    //        AvailableTrainers = trainers
-    //    };
+    // Randevuyu onayla
+    [HttpPost]
+    public async Task<IActionResult> Confirm(int id)
+    {
+        await _appointmentService.ConfirmAppointmentAsync(id);
+        return RedirectToAction("Index");
+    }
 
-    //    return View(model);
-    //}
+    // Randevuyu iptal et
+    [HttpPost]
+    public async Task<IActionResult> Cancel(int id)
+    {
+        await _appointmentService.CancelAppointmentAsync(id);
+        return RedirectToAction("Index");
+    }
 }

@@ -1,0 +1,23 @@
+﻿@using Gymon.BL.ViewModels.CategoryVMs
+@model CreateAndUpdateCategoryVM
+@{
+    ViewData["Title"] = "Create Category";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Yeni Kategori Oluştur</h2>
+
+<form method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label for="Name">Kategori Adı</label>
+        <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" />
+        @if (ViewData.ModelState["Name"]?.Errors.Any() == true)
+        {
+            <div class="text-danger">@ViewData.ModelState["Name"]?.Errors[0].ErrorMessage</div>
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

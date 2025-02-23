@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,22 +32,14 @@ namespace Gymon.DAL.Configurations
                 .HasForeignKey(a => a.SportTypeId);
 
             builder.Property(a => a.AppointmentDate)
-                .IsRequired();
-
-            builder.Property(a => a.AppointmentTime)
-                .IsRequired();
-
-            builder.Property(a => a.Amount)
-                .HasColumnType("decimal(18,2)");
-
-            builder.Property(a => a.PaymentMethod)
-                .IsRequired()
-                .HasMaxLength(50);
-
-            builder.Property(a => a.PaymentStatus)
-                .IsRequired();
+            .IsRequired();
 
             builder.Property(a => a.Status)
+                  .IsRequired() // Make it required
+                  .HasConversion<string>() // Store as string
+                  .HasMaxLength(20); // Specify max length
+        
+        builder.Property(a => a.Status)
                 .IsRequired()
                 .HasMaxLength(20);
         }

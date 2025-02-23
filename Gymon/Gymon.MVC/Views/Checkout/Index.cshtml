@@ -1,0 +1,159 @@
+﻿@using Gymon.Core.Entities
+@model OrderDetail // Modelinize uygun namespace'i kullanın
+@{
+    ViewData["Title"] = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Banner Style One Start -->
+<section class="banner-style-one">
+    <div class="parallax" style="background-image: url(https://via.placeholder.com/1920x640);"></div>
+    <div class="container">
+        <div class="row">
+            <div class="banner-details">
+                <h2>Checkout</h2>
+                <p>Our values and vaulted us to the top of our industry.</p>
+            </div>
+        </div>
+    </div>
+    <div class="breadcrums">
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-house"></i>
+                            <p>Home</p>
+                        </a>
+                    </li>
+                    <li class="current">
+                        <p>Checkout</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Banner Style One End -->
+<!-- Cart Start -->
+<section class="gap checkout detail-page">
+    <form id="checkout-form" method="post" asp-action="PlaceOrder" asp-controller="Checkout">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12">
+                            <div class="billing">
+                                <h3>Billing Address</h3>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" name="FullName" placeholder="Complete Name" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="email" name="Email" placeholder="Email Address" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" name="City" placeholder="City Name" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" name="State" placeholder="State Name" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <select name="Country" class="form-control" required>
+                                            <option selected disabled>Country</option>
+                                            <option>Azerbaijan</option>
+                                            <option>Turkey</option>
+                                            <option>America</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row dist">
+                                    <div class="col-md-6">
+                                        <input type="number" name="PostalCode" placeholder="Postal Code" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="tel" name="Phone" placeholder="Phone No" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" name="Address" placeholder="Address" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <textarea name="OrderNote" placeholder="Order Note"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="cart-t-payment-m">
+                                <div class="cart-total-box">
+                                    <div class="final">
+                                        <h4>Cart Total</h4>
+                                        <ul>
+                                            <li>
+                                                <span>Subtotal:</span>
+                                                <span id="subtotal">$358.00</span>
+                                            </li>
+                                            <li>
+                                                <span>Shipping:</span>
+                                                <span>$0.00</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="total">
+                                        <ul>
+                                            <li>
+                                                <span>Total:</span>
+                                                <span id="total">$358.00</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="payment-method">
+                                    <button type="submit" id="pay-button" class="theme-btn">Place Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+<!-- Cart End -->
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    const stripe = Stripe('pk_test_51QvcsgDipqoNh4omAeWPOGSJobcIKTL4s57l6TGFNFrDoOCnVnuwXXwtU7hJ9Th6sVQzqkEzBPAVI5h1jXavt1nV00d5VevpCB'); // Your Stripe public key
+
+    // Formun gönderilmesini engelle
+    document.getElementById('checkout-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Stripe ödeme yönlendirmesi
+        stripe.redirectToCheckout({
+            lineItems: [{
+                price: 'YOUR_PRICE_ID', // Ürün fiyat ID'si
+                quantity: 1,
+            }],
+            mode: 'payment',
+            successUrl: window.location.origin + '/Checkout/Success',
+            cancelUrl: window.location.origin + '/Checkout/Index',
+        }).then(function (result) {
+            if (result.error) {
+                alert(result.error.message);
+            }
+        });
+    });
+</script>

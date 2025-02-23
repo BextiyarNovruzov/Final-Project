@@ -1,6 +1,6 @@
 ﻿using Gymon.BL;
+using Gymon.Core.Entities;
 using Gymon.DAL.Context;
-using Gymon.MVC.Extentions;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,25 +15,39 @@ namespace Gymon.MVC
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            // Add DBcontext
-            builder.Services.AddDbContext<GymonDbContext>(opt =>
-            {
-                opt.UseSqlServer(builder.Configuration.GetConnectionString("MsSql"));
-            });
+            // Add DbContext
+            builder.Services.AddDbContext<GymonDbContext>(options =>
+            options.UseSqlServer(
+                builder.Configuration.GetConnectionString("MsSql"),
+                sqlServerOptions =>
+                {
+                    sqlServerOptions.CommandTimeout(3600);
+                    sqlServerOptions.EnableRetryOnFailure(5, TimeSpan.FromSeconds(30), null);
+                }));
 
+            builder.Services.AddDistributedMemoryCache(); // Gerekli önbelleği ekle
             builder.Services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromMinutes(30); // Session süresi
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
 
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+            builder.Services.AddHttpContextAccessor();
 
 
             // Add AutoMapper and Custom Services
             builder.Services.AddAutoMapper();
             builder.Services.AddServices();   // Bu servislerin sıralaması genellikle önemli değil
             builder.Services.AddRepositories();
+            builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
             // Authentication ve Authorization'ı önce ekle
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -65,11 +79,9 @@ namespace Gymon.MVC
                 app.UseHsts();  // Production için HSTS kullanımı
             }
 
-
-            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseUserSeedAsync();
+            app.UseSession(); // Session middleware'ını buraya ekleyin
             app.UseRouting();
 
             app.UseAuthentication();  // Authentication middleware

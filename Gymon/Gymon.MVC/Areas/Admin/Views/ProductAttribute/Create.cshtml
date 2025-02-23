@@ -1,0 +1,65 @@
+﻿@using Gymon.BL.ViewModels.ProductAttribute
+@model ProductAttributeVM
+
+@{
+    ViewData["Title"] = "Create Product Attribute";
+}
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+
+    <!-- ProductId Hidden Input -->
+    <input type="hidden" asp-for="ProductId" />
+
+    <div class="form-group">
+        <label asp-for="Brands"></label>
+        <input asp-for="Brands" class="form-control" />
+        <span asp-validation-for="Brands" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Models"></label>
+        <input asp-for="Models" class="form-control" />
+        <span asp-validation-for="Models" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Colors</label>
+        @if (Model.Colors != null && Model.Colors.Count > 0)
+        {
+            foreach (var color in Model.Colors)
+            {
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="ColorIds" value="@color.Id" id="color_@color.Id" />
+                    <label class="form-check-label" for="color_@color.Id">@color.Name</label>
+                </div>
+            }
+        }
+        else
+        {
+            <span class="text-danger">No colors available.</span>
+        }
+
+    </div>
+
+    <div class="form-group">
+        <label>Sizes</label>
+        @if (Model.Sizes != null && Model.Sizes.Count > 0)
+        {
+            foreach (var size in Model.Sizes)
+            {
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="SizeIds" value="@size.Id" id="size_@size.Id" />
+                    <label class="form-check-label" for="size_@size.Id">@size.Name</label>
+                </div>
+            }
+        }
+        else
+        {
+            <span class="text-danger">No sizes available.</span>
+        }
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

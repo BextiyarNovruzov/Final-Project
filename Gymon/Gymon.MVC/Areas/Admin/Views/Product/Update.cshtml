@@ -1,0 +1,84 @@
+﻿@using Gymon.BL.ViewModels.ProductVMs
+@model UpdateProductVM
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Ürün Güncelle";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Update" enctype="multipart/form-data" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Stock"></label>
+        <input asp-for="Stock" class="form-control" />
+        <span asp-validation-for="Stock" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Mevcut Kapak Resmi:</label>
+        @if (!string.IsNullOrEmpty(Model.CoverImage))
+        {
+            <img src="@Url.Content("~/" + Model.CoverImage)" alt="Kapak Resmi" style="width: 100px; height: auto;" />
+        }
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CoverImageFile">Yeni Kapak Resmi (Opsiyonel):</label>
+        <input asp-for="CoverImageFile" type="file" class="form-control" />
+        <span asp-validation-for="CoverImageFile" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Discount"></label>
+        <input asp-for="Discount" class="form-control" />
+        <span asp-validation-for="Discount" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CostPrice"></label>
+        <input asp-for="CostPrice" class="form-control" />
+        <span asp-validation-for="CostPrice" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SellPrice"></label>
+        <input asp-for="SellPrice" class="form-control" />
+        <span asp-validation-for="SellPrice" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CategoryId">Kategori:</label>
+        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories"></select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageFiles">Yeni Resimler (Opsiyonel):</label>
+        <input asp-for="ImageFiles" type="file" class="form-control" multiple />
+        <span asp-validation-for="ImageFiles" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+    <a asp-action="Index" class="btn btn-secondary">İptal</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

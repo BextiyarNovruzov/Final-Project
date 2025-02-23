@@ -1,8 +1,11 @@
-﻿
+﻿@using Gymon.BL.ViewModels.ProductVMs
+@model ProductDetailsVM
+
 @{
-    ViewData["Title"] = "ProductDetails";
+    ViewData["Title"] = "Product Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <!-- Banner Style One Start -->
 <section class="banner-style-one">
     <div class="parallax" style="background-image: url(https://via.placeholder.com/1920x640);"></div>
@@ -10,7 +13,7 @@
         <div class="row">
             <div class="banner-details">
                 <h2>Product Detail</h2>
-                <p>our values and vaulted us to the top of our industry.</p>
+                <p>Our values and vaulted us to the top of our industry.</p>
             </div>
         </div>
     </div>
@@ -33,6 +36,12 @@
     </div>
 </section>
 <!-- Banner Style One End -->
+@section Scripts {
+    <script>
+        // JavaScript code for image gallery, if needed
+    </script>
+}
+
 <!-- Product Detail Start -->
 <section class="gap no-bottom product-detail light-bg-color">
     <div class="container">
@@ -40,59 +49,39 @@
             <div class="col-lg-6">
                 <div class="pd-gallery">
                     <ul class="pd-imgs">
-                        <li class="li-pd-imgs">
-                            <a href="JavaScript:void(0)">
-                                <img src="https://via.placeholder.com/460x500" alt="Product Detail Image">
-                            </a>
-                        </li>
-                        <li class="li-pd-imgs">
-                            <a href="JavaScript:void(0)">
-                                <img src="https://via.placeholder.com/460x500" alt="Product Detail Image">
-                            </a>
-                        </li>
-                        <li class="li-pd-imgs">
-                            <a href="JavaScript:void(0)">
-                                <img src="https://via.placeholder.com/460x500" alt="Product Detail Image">
-                            </a>
-                        </li>
+                        @foreach (var image in Model.Images)
+                        {
+                            <li class="li-pd-imgs">
+                                <a href="JavaScript:void(0)">
+                                    <img src="@image" alt="Product Image">
+                                </a>
+                            </li>
+                        }
                     </ul>
                     <div class="pd-main-img">
-                        <img id="NZoomImg" data-NZoomscale="2" style="width: 100%;height: 100%;" src="https://via.placeholder.com/460x500" alt="Product Detail Image">
+                        <img id="NZoomImg" data-NZoomscale="2" src="@Model.CoverImage" alt="Main Product Image">
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="pd-data">
-                    <div class="ratings">
-                        <i class="fa-solid fa-star"></i>
-                        <span>5.0</span>
+                    <h2>@Model.Name</h2>
+                    <p>@Model.Description</p>
+                    <div class="pd-stock">
+                        <strong>Stock:</strong> @Model.Stock
                     </div>
-                    <h2>Green Gym Water Bottel</h2>
-                    <div class="pd-quality">
-                        <span>Quantity</span>
-                        <input type="number" name="number" value="1">
+                    <div class="pd-price">
+                        <span class="discounted-price">$@Model.SellPrice.ToString("F2")</span>
+                        <span class="original-price"><del>$@Model.DiscountedPrice.ToString("F2")</del></span>
                     </div>
-                    <ul class="pd-price">
-                        <li class="pd-sale-price"><span>$</span>40.00</li>
-                        <li class="pd-regular-price"><span>$</span><del>50.00</del></li>
-                    </ul>
-                    <p class="free-ship">Free Shipping On This Item</p>
-                    <a href="javascript:void(0)" class="theme-btn">Add to Cart </a>
+                    <a href="javascript:void(0)" class="theme-btn">Add to Cart</a>
                     <div class="pd-cat-tags">
-                        <ul>
-                            <li>
-                                <span class="theme-bg-clr font-bold">Sku:</span>
-                                <ul class="pd-sku">
-                                    <li>2CSTD7</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="theme-bg-clr font-bold">Category:</span>
-                                <ul class="pd-cat">
-                                    <li><a href="JavaScript:void(0)">Gym</a></li>
-                                    <li><a href="JavaScript:void(0)">Workout</a></li>
-                                </ul>
-                            </li>
+                        <span class="font-bold">Categories:</span>
+                        <ul class="pd-cat">
+                            @foreach (var category in Model.Categories)
+                            {
+                                <li><a href="JavaScript:void(0)">@category.Name</a></li>
+                            }
                         </ul>
                     </div>
                 </div>
@@ -100,6 +89,7 @@
         </div>
     </div>
 </section>
+
 <section class="gap detail-page">
     <div class="container">
         <div class="row">
@@ -115,15 +105,20 @@
                             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                                 <div class="des-tab">
                                     <h3>About Product</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere scelerisque. Donec sagittis adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere scelerisque. Donec sagittis adipiscing elit.</p>
-                                    <p>A gym isn’t just a place for exercise; it’s the place you go to unwind, socialize & work out. The gym is a whole some experience. Some of the most successful facilities have several gym features that contribute to the kind of member experience that drives retention and sales.</p>
                                     <ul class="sm-circle">
-                                        <li>Experience that drives retention and sales</li>
-                                        <li>Nurturing and empowering the environment</li>
-                                        <li>The place you go to unwind, socialize & work out</li>
+                                        <li><p>@Model.Description</p></li>
                                     </ul>
                                     <figure>
-                                        <img class="w-100" src="https://via.placeholder.com/1116x561" alt="Description Image">
+                                        <ul class="pd-imgs">
+                                            @foreach (var image in Model.Images)
+                                            {
+                                                <li class="li-pd-imgs">
+                                                    <a href="JavaScript:void(0)">
+                                                        <img class="w-100" src="@image" width="45" alt="Product Image">
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
                                     </figure>
                                 </div>
                             </div>
@@ -134,7 +129,6 @@
                                         <li><i class="fa-solid fa-check"></i> 30-Minute Fitness Consultation</li>
                                         <li><i class="fa-solid fa-check"></i> Guest Passes & Bottled Water</li>
                                         <li><i class="fa-solid fa-check"></i> Club 360 Class Facility</li>
-                                        <li><i class="fa-solid fa-check"></i> Some of the most successful facilities</li>
                                         <li><i class="fa-solid fa-check"></i> State of the Art Equipment</li>
                                     </ul>
                                     <h3>Additional Information</h3>
@@ -144,12 +138,10 @@
                                                 <tr>
                                                     <td>Colour</td>
                                                     <td>Mid-Grey</td>
-
                                                 </tr>
                                                 <tr>
                                                     <td>Size</td>
                                                     <td>400ml</td>
-
                                                 </tr>
                                                 <tr>
                                                     <td>Brand</td>
@@ -170,124 +162,120 @@
                                         <div class="rev-tab">
                                             <h3>Reviews</h3>
                                             <div class="total-reviews d-flex-all justify-content-between">
-                                                <div class="t-r d-flex-all">
-                                                    5.0 Rating
-                                                </div>
+                                                    <div class="t-r d-flex-all">
+                                                        @if (Model.Reviews != null && Model.Reviews.Any())
+                                                        {
+                                                            // Calculate the average rating
+                                                            var averageRating = Model.Reviews.Average(r => r.Rating);
+                                                            <span>@Math.Round(averageRating, 1) Rating</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span>No Ratings</span>
+                                                        }
+                                                    </div>
                                                 <div class="f-r d-flex-all">
-                                                    <span>( 158 Reviews )</span>
+                                                    <span>
+                                                        @Model.Reviews.Count() Reviews
+                                                    </span>
                                                     <div class="r-s">
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
+                                                        @if (Model.Reviews != null && Model.Reviews.Any())
+                                                        {
+                                                            var roundedRating = (int)Math.Round(Model.Reviews.Average(r => r.Rating));
+                                                            for (int i = 0; i < 5; i++)
+                                                            {
+                                                                <i class="fa-solid fa-star @(i < roundedRating ? "filled" : "")"></i>
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            // Show empty stars if there are no reviews
+                                                            for (int i = 0; i < 5; i++)
+                                                            {
+                                                                <i class="fa-solid fa-star"></i>
+                                                            }
+                                                        }
                                                     </div>
                                                 </div>
                                             </div>
+
+                                   
+
                                             <div class="review comments">
                                                 <ul>
-                                                    <li>
-                                                        <div class="comment">
-                                                            <div class="c-img">
-                                                                <figure>
-                                                                    <img src="https://via.placeholder.com/170x170" alt="Comment Image One">
-                                                                </figure>
-                                                            </div>
-                                                            <div class="c-data">
-                                                                <h4>Jonathom Doe</h4>
-                                                                <span>July 31, 2024</span>
-                                                                <p>Delivered ye sportsmen zealously arranging frankness estimable as. Nay any article enabled musical shyness yet sixteen.</p>
-                                                                <div class="c-r-btn">
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
+                                                    @if (Model.Reviews != null && Model.Reviews.Any())
+                                                    {
+                                                        foreach (var review in Model.Reviews)
+                                                        {
+                                                            <li>
+                                                                <div class="comment">
+                                                                    <div class="c-data">
+                                                                        <h4>@review.ReviewerName</h4>
+                                                                        <span>@review.CreatedDate.ToString("MMMM dd, yyyy")</span>
+                                                                        <p>@review.Comment</p>
+                                                                        <div class="c-r-btn">
+                                                                            @for (int i = 0; i < review.Rating; i++)
+                                                                            {
+                                                                                <i class="fa-solid fa-star"></i>
+                                                                            }
+                                                                            @for (int i = review.Rating; i < 5; i++)
+                                                                            {
+                                                                                <i class="fa-regular fa-star"></i>
+                                                                            }
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="comment">
-                                                            <div class="c-img">
-                                                                <figure>
-                                                                    <img src="https://via.placeholder.com/170x170" alt="Comment Image One">
-                                                                </figure>
-                                                            </div>
-                                                            <div class="c-data">
-                                                                <h4>Jonathom Doe</h4>
-                                                                <span>July 31, 2024</span>
-                                                                <p>Delivered ye sportsmen zealously arranging frankness estimable as. Nay any article enabled musical shyness yet sixteen.</p>
-                                                                <div class="c-r-btn">
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="comment">
-                                                            <div class="c-img">
-                                                                <figure>
-                                                                    <img src="https://via.placeholder.com/170x170" alt="Comment Image One">
-                                                                </figure>
-                                                            </div>
-                                                            <div class="c-data">
-                                                                <h4>Jonathom Doe</h4>
-                                                                <span>July 31, 2024</span>
-                                                                <p>Delivered ye sportsmen zealously arranging frankness estimable as. Nay any article enabled musical shyness yet sixteen.</p>
-                                                                <div class="c-r-btn">
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
+                                                            </li>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <p>No reviews available for this product.</p>
+                                                    }
+
                                                 </ul>
                                                 <a class="load-more" href="javascript:void(0)">Load More</a>
                                             </div>
-
                                         </div>
                                     </div>
                                     <div class="col-lg-5">
-                                        <div class="rev-tab">
-                                            <div class="post-review shape">
-                                                <h3>Post Review</h3>
-                                                <div class="select-rating d-flex-all justify-content-start">
-                                                    <span>Select Rating</span>
-                                                    <div class="p-r-s">
-                                                        <img src="assets/images/star.svg" alt="Star Svg">
-                                                        <img src="assets/images/star.svg" alt="Star Svg">
-                                                        <img src="assets/images/star.svg" alt="Star Svg">
-                                                        <img src="assets/images/star.svg" alt="Star Svg">
-                                                        <img src="assets/images/star.svg" alt="Star Svg">
-                                                    </div>
+                                        <div class="add-review">
+                                            <h3>Add a Review</h3>
+                                            <form asp-controller="Shop" asp-action="SubmitReview" method="post">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="ProductId" value="@Model.Id" />
+                                                <input type="hidden" name="UserId" value="@Model.UserId" />
+
+                                                <div class="form-group">
+                                                    <label for="name">Name</label>
+                                                    <input type="text" class="form-control" id="name" name="ReviewerName" placeholder="Your Name" required>
                                                 </div>
-                                                <div class="form">
-                                                    <form>
-                                                        <textarea placeholder="Review"></textarea>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <input type="text" name="text" placeholder="Complete Name">
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-                                                                <input type="email" name="email" placeholder="Email Address">
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit" class="theme-btn">Submit Review </button>
-                                                    </form>
+
+                                                <div class="form-group">
+                                                    <label for="review">Your Review</label>
+                                                    <textarea class="form-control" id="review" name="Comment" rows="4" placeholder="Your Review" required></textarea>
                                                 </div>
-                                            </div>
+
+                                                <div class="form-group">
+                                                    <label for="rating">Rating</label>
+                                                    <select class="form-select" id="rating" name="Rating" required>
+                                                        <option value="" disabled selected>Select Rating</option>
+                                                        @for (int i = 1; i <= 5; i++)
+                                                        {
+                                                            <option value="@i">@i Star(s)</option>
+                                                        }
+                                                    </select>
+                                                </div>  
+
+                                                <button type="submit" class="theme-btn">Submit Review</button>
+                                            </form>
+
+                                        
+
                                         </div>
                                     </div>
-                                </div>
 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -296,4 +284,4 @@
         </div>
     </div>
 </section>
-<!-- Product Detail End --> 
+<!-- Product Detail End -->

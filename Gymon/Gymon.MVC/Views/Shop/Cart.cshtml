@@ -1,4 +1,5 @@
-﻿
+﻿@using Gymon.BL.ViewModels.Cart
+@model CartViewModel
 @{
     ViewData["Title"] = "Cart";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,7 +12,7 @@
         <div class="row">
             <div class="banner-details">
                 <h2>Cart</h2>
-                <p>our values and vaulted us to the top of our industry.</p>
+                <p>Our values and vaulted us to the top of our industry.</p>
             </div>
         </div>
     </div>
@@ -59,98 +60,39 @@
                         </li>
                     </ul>
                     <ul class="cart-table">
-                        <li>
-                            <div class="c-c">
-                                <div class="c-data">
-                                    <a class="cr-svg d-flex-all" href="javascript:void(0)">
-                                        <img src="assets/images/cross.svg" alt="Cross Svg">
-                                    </a>
-                                    <img src="https://via.placeholder.com/80x80" alt="Product One">
-                                    <h2><a href="javascript:void(0)">Gym Water Bottel</a></h2>
+                        @foreach (var item in Model.Items)
+                        {
+                            <li>
+                                <div class="c-c">
+                                    <div class="c-data">
+                                        <a class="cr-svg d-flex-all" href="@Url.Action("RemoveFromCart", "Shop", new { productId = item.ProductId })">
+                                            <img src="assets/images/cross.svg" alt="Cross Svg">
+                                        </a>
+                                        <img src="@item.CoverImage" alt="@item.ProductName">
+                                        <h2><a href="javascript:void(0)">@item.ProductName</a></h2>
+                                    </div>
+                                    <div class="c-price">
+                                        <span class="orgnl">$ @item.Price</span>
+                                    </div>
+                                    <div class="c-quality">
+                                        <input type="number" name="quantity" value="@item.Quantity" min="1" />
+                                    </div>
+                                    <div class="c-total">
+                                        <span>$ @item.TotalPrice</span>
+                                    </div>
                                 </div>
-                                <div class="c-price">
-                                    <span class="orgnl">$ 40.00</span>
-                                    <del class="sale">$ 50.00</del>
-                                </div>
-                                <div class="c-quality">
-                                    <input type="number" name="number" value="1">
-                                </div>
-                                <div class="c-total">
-                                    <span>$ 40.00</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="c-c">
-                                <div class="c-data">
-                                    <a class="cr-svg d-flex-all" href="javascript:void(0)">
-                                        <img src="assets/images/cross.svg" alt="Cross Svg">
-                                    </a>
-                                    <img src="https://via.placeholder.com/80x80" alt="Product One">
-                                    <h2><a href="javascript:void(0)">Gym Water Bottel</a></h2>
-                                </div>
-                                <div class="c-price">
-                                    <span class="orgnl">$ 40.00</span>
-                                    <del class="sale">$ 50.00</del>
-                                </div>
-                                <div class="c-quality">
-                                    <input type="number" name="number" value="1">
-                                </div>
-                                <div class="c-total">
-                                    <span>$ 40.00</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="c-c">
-                                <div class="c-data">
-                                    <a class="cr-svg d-flex-all" href="javascript:void(0)">
-                                        <img src="assets/images/cross.svg" alt="Cross Svg">
-                                    </a>
-                                    <img src="https://via.placeholder.com/80x80" alt="Product One">
-                                    <h2><a href="javascript:void(0)">Gym Water Bottel</a></h2>
-                                </div>
-                                <div class="c-price">
-                                    <span class="orgnl">$ 40.00</span>
-                                    <del class="sale">$ 50.00</del>
-                                </div>
-                                <div class="c-quality">
-                                    <input type="number" name="number" value="1">
-                                </div>
-                                <div class="c-total">
-                                    <span>$ 40.00</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="c-c">
-                                <div class="c-data">
-                                    <a class="cr-svg d-flex-all" href="javascript:void(0)">
-                                        <img src="assets/images/cross.svg" alt="Cross Svg">
-                                    </a>
-                                    <img src="https://via.placeholder.com/80x80" alt="Product One">
-                                    <h2><a href="javascript:void(0)">Gym Workout Shoes</a></h2>
-                                </div>
-                                <div class="c-price">
-                                    <span class="orgnl">$ 40.00</span>
-                                    <del class="sale">$ 50.00</del>
-                                </div>
-                                <div class="c-quality">
-                                    <input type="number" name="number" value="1">
-                                </div>
-                                <div class="c-total">
-                                    <span>$ 40.00</span>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        }
                     </ul>
                 </div>
                 <div class="update-cart d-flex-all justify-content-between">
-                    <form>
-                        <input type="text" name="text" placeholder="Coupon Code">
+                    <form method="post" action="@Url.Action("ApplyCoupon", "Shop")">
+                        <input type="text" name="couponCode" placeholder="Coupon Code" />
                         <button type="submit" class="theme-btn">Apply</button>
                     </form>
-                    <a href="contact.html" class="theme-btn">Update Cart </a>
+                    <!-- Form to go to the Checkout action -->
+                    <a asp-controller="Shop" asp-action="Checkout" class="btn btn-primary">Ödeme Sayfasına Git</a>
+
                 </div>
             </div>
         </div>
@@ -163,11 +105,11 @@
                         <ul>
                             <li>
                                 <span>Subtotal:</span>
-                                <span>$358.00</span>
+                                <span id="subtotal">$ @Model.Items.Sum(i => i.TotalPrice)</span>
                             </li>
                             <li>
                                 <span>Shipping:</span>
-                                <span>$358.00</span>
+                                <span>$ 0.00</span> <!-- You can modify shipping logic if needed -->
                             </li>
                         </ul>
                     </div>
@@ -175,7 +117,7 @@
                         <ul>
                             <li>
                                 <span>Total:</span>
-                                <span>$358.00</span>
+                                <span id="total">$ @Model.Items.Sum(i => i.TotalPrice)</span> <!-- You may want to add shipping here -->
                             </li>
                         </ul>
                     </div>
@@ -185,3 +127,83 @@
     </div>
 </section>
 <!-- Cart End -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Miktar değiştiğinde
+        $("input[name='quantity']").on("change", function () {
+            var $this = $(this);
+            var quantity = parseInt($this.val());
+            var price = parseFloat($this.closest("li").find(".c-price span.orgnl").text().replace('$', ''));
+            var total = (quantity * price).toFixed(2);
+
+            // TotalPrice'yi güncelle
+            $this.closest("li").find(".c-total span").text("$ " + total);
+
+            // Sepetin subtotal ve total'ını güncelle
+            updateCartTotal();
+        });
+
+        function updateCartTotal() {
+            var subtotal = 0;
+
+            $("input[name='quantity']").each(function () {
+                var quantity = parseInt($(this).val());
+                var price = parseFloat($(this).closest("li").find(".c-price span.orgnl").text().replace('$', ''));
+                subtotal += quantity * price;
+            });
+
+            // Toplamları güncelle
+            $("#subtotal").text("$ " + subtotal.toFixed(2));
+            $("#total").text("$ " + subtotal.toFixed(2)); // Shipping eklenecekse burada güncellenebilir
+        }
+    });
+</script>
+
+@* 
+<script>
+    var stripe = Stripe('pk_test_51QvcsgDipqoNh4omAeWPOGSJobcIKTL4s57l6TGFNFrDoOCnVnuwXXwtU7hJ9Th6sVQzqkEzBPAVI5h1jXavt1nV00d5VevpCB'); // Replace with your actual publishable key
+    var elements = stripe.elements();
+    var cardElement = elements.create('card');
+    cardElement.mount('#card-element');
+
+    // Handle real-time validation errors from the card Element.
+    cardElement.on('change', function(event) {
+        var displayError = document.getElementById('card-errors');
+        if (event.error) {
+            displayError.textContent = event.error.message;
+        } else {
+            displayError.textContent = '';
+        }
+    });
+
+    var form = document.getElementById('payment-form');
+    form.addEventListener('submit', function(event) {
+        // Check if the card element is complete before submitting
+        if (cardElement._complete) {
+            event.preventDefault(); // Prevent form submission
+
+            // Create a token using the card element
+            stripe.createToken(cardElement).then(function(result) {
+                if (result.error) {
+                    // Display error in your UI
+                    var displayError = document.getElementById('card-errors');
+                    displayError.textContent = result.error.message;
+                } else {
+                    // Otherwise, add the token to the form and submit
+                    var hiddenInput = document.createElement('input');
+                    hiddenInput.setAttribute('type', 'hidden');
+                    hiddenInput.setAttribute('name', 'stripeToken');
+                    hiddenInput.setAttribute('value', result.token.id); // Set the token value
+                    form.appendChild(hiddenInput);
+                    form.submit(); // Now submit the form
+                }
+            });
+        } else {
+            // If the card is incomplete, show an error message
+            var displayError = document.getElementById('card-errors');
+            displayError.textContent = "Your card number is incomplete.";
+        }
+    });
+</script> *@
